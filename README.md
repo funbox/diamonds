@@ -18,6 +18,12 @@ Checks browser support of the passed `type` attribute value for `input` tag.
 
 It's useful when one is dealing with old browsers.
 
+### [colorize](./lib/colorize.js)
+
+Returns passed params as a colored string.
+
+It's useful when one wants to colorize logs in terminal.
+
 ### [datauri-to-blob](./lib/datauri-to-blob.js)
 
 Converts DataURI string into Blob instance.
