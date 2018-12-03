@@ -90,6 +90,10 @@ It is useful when one doesn't need a precise check (the checks that are used ins
 
 Converts the passed object which contains primitive values into the query string. 
 
+### [rgb-to-hex](./lib/rgb-to-hex.js)
+
+Transforms RBG color into HEX.
+
 ### [throttle](./lib/throttle.js)
 
 Transforms the passed callback into the functions that delays callback firing.
