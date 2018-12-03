@@ -23,3 +23,10 @@ Extracts domain from the string.
 
 It's useful when one need to do this in the 
 [browsers without URL support](https://developer.mozilla.org/en-US/docs/Web/API/URL).
+
+### [get-object-path](./lib/get-object-path.js)
+
+Gets the value at path of object.
+
+It's useful when one have to work with highly nested objects and don't want to write long conditionals.
+`getObjectPath(obj, 'key1.key2.key3')` and the work is done. 
