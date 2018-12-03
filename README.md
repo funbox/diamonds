@@ -48,6 +48,10 @@ because it creates shadow copy.
 
 Transforms n-dimensional array into one-dimensional. 
 
+### [equals](./lib/equals.js)
+
+Deeply compares passed params.
+
 ### [format-number-string](./lib/format-number-string.js)
 
 Formats a number (or a string with number inside) using the passed format.
