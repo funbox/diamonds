@@ -45,6 +45,10 @@
 
 Форматирует число (или корректную строку с числом) по маске мобильных номеров телефонов РФ.
 
+### [get-browser-scrollbar-width](./lib/get-browser-scrollbar-width.js)
+
+Возвращает ширину скроллбара в браузере.
+
 ### [get-hostname-from-string](./lib/get-hostname-from-string.js)
 
 Извлекает домен из строки.
