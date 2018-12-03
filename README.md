@@ -86,6 +86,10 @@ Returns `true` when UA is similar to mobile.
 
 It is useful when one doesn't need a precise check (the checks that are used inside the script are quite simple).
 
+### [object-to-query-string](./lib/object-to-query-string.js)
+
+Converts the passed object which contains primitive values into the query string. 
+
 ### [throttle](./lib/throttle.js)
 
 Transforms the passed callback into the functions that delays callback firing.
