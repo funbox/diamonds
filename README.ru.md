@@ -33,6 +33,10 @@
 
 Пригождается, когда нужно отформатировать, например, стоимость чего-то.
 
+### [format-phone-number-string](./lib/format-phone-number-string.js)
+
+Форматирует число (или корректную строку с числом) по маске мобильных номеров телефонов РФ.
+
 ### [get-hostname-from-string](./lib/get-hostname-from-string.js)
 
 Извлекает домен из строки.

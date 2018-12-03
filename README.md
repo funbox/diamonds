@@ -29,6 +29,10 @@ By default:
   
 It's useful when one needs to format, let's say, the cost of something.
 
+### [format-phone-number-string](./lib/format-phone-number-string.js)
+
+Formats a number (or a string with number inside) by mask of Russian MSISDNs. 
+
 ### [get-hostname-from-string](./lib/get-hostname-from-string.js)
 
 Extracts domain from the string.
