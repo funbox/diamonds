@@ -65,6 +65,10 @@ but number is unique.
 It's useful when you need a unique string that can be namespaced. E.g. for generating unique IDs 
 of the DOM elements for creating relations between them and their labels.
 
+### [is-email-valid](./lib/is-email-valid.js)
+
+Returns `true` when the passed string is a valid email.
+
 ### [is-mobile](./lib/is-mobile.js)
 
 Returns `true` when UA is similar to mobile.
