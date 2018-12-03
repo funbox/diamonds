@@ -104,6 +104,11 @@ of the DOM elements for creating relations between them and their labels.
 
 Converts HEX color to RGB.
 
+### [is-element-in-viewport](./lib/is-element-in-viewport.js)
+
+Returns `true` when the passed DOM node is visible in the viewport 
+(fully or partially depending on the params). 
+
 ### [is-email-valid](./lib/is-email-valid.js)
 
 Returns `true` when the passed string is a valid email.
