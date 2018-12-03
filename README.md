@@ -47,6 +47,12 @@ Gets the value at path of object.
 It's useful when one have to work with highly nested objects and don't want to write long conditionals.
 `getObjectPath(obj, 'key1.key2.key3')` and the work is done. 
 
+### [get-plural](./lib/get-plural.js)
+
+Picks and returns a correct unit name for the passed number (according to Russian lang rules).
+
+It's useful when it's important to pick correct unit name. E.g. “1 day”, “2 days”, etc.
+
 ### [get-random-num](./lib/get-random-num.js)
 
 Returns [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) from the passed range.
