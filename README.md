@@ -76,6 +76,10 @@ but number is unique.
 It's useful when you need a unique string that can be namespaced. E.g. for generating unique IDs 
 of the DOM elements for creating relations between them and their labels.
 
+### [hex-to-rgb](./lib/hex-to-rgb.js)
+
+Converts HEX color to RGB.
+
 ### [is-email-valid](./lib/is-email-valid.js)
 
 Returns `true` when the passed string is a valid email.
