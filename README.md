@@ -81,3 +81,9 @@ Returns `true` when the passed string is a valid email.
 Returns `true` when UA is similar to mobile.
 
 It is useful when one doesn't need a precise check (the checks that are used inside the script are quite simple).
+
+### [throttle](./lib/throttle.js)
+
+Transforms the passed callback into the functions that delays callback firing.
+
+It's useful when one wants to react on scroll but only when user makes a pause between scrolling. 
