@@ -14,6 +14,10 @@
 Пригождается, когда нужно, например, 
 отключить скролл при открытии сайдбара, а при закрытии включить. 
 
+### [camel-to-kebab](./lib/camel-to-kebab.js)
+
+Переводит строку из camelCase в kebab-case.
+
 ### [check-input-type-support](./lib/check-input-type-support.js)
 
 Проверяет поддержку браузером переданного значения атрибута `type` блока `input`.

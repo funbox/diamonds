@@ -12,6 +12,10 @@ the second one enables the scroll and restores its state.
 
 It's useful when one wants to disable scroll while opening sidebar and enable it while closing. 
 
+### [camel-to-kebab](./lib/camel-to-kebab.js)
+
+Converts camelCase string into kebab-case.
+
 ### [check-input-type-support](./lib/check-input-type-support.js)
 
 Checks browser support of the passed `type` attribute value for `input` tag.
