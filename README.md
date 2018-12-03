@@ -34,3 +34,9 @@ It's useful when one have to work with highly nested objects and don't want to w
 ### [get-random-num](./lib/get-random-num.js)
 
 Returns [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) from the passed range.
+
+### [is-mobile](./lib/is-mobile.js)
+
+Returns `true` when UA is similar to mobile.
+
+It is useful when one doesn't need a precise check (the checks that are used inside the script are quite simple).
