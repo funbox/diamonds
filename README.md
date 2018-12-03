@@ -30,3 +30,7 @@ Gets the value at path of object.
 
 It's useful when one have to work with highly nested objects and don't want to write long conditionals.
 `getObjectPath(obj, 'key1.key2.key3')` and the work is done. 
+
+### [get-random-num](./lib/get-random-num.js)
+
+Returns [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) from the passed range.
