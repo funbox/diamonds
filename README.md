@@ -17,6 +17,18 @@ Converts DataURI string into Blob instance.
 
 It's useful when one needs to send an image from online editor to the server.
 
+### [format-number-string](./lib/format-number-string.js)
+
+Formats a number (or a string with number inside) using the passed format.
+
+By default:
+  
+  - digit group separator (`space`): ` ` (plain space),
+  - decimal separator (`delimiter`): ',' (comma),
+  - minus sign (`minus`): '−' (minus, U+2212).
+  
+It's useful when one needs to format, let's say, the cost of something.
+
 ### [get-hostname-from-string](./lib/get-hostname-from-string.js)
 
 Extracts domain from the string.
