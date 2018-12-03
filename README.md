@@ -37,6 +37,13 @@ the debounced function was invoked.
 
 It's useful when one have to handle scroll events but want to fire callback after the events flow finishes.
 
+### [deep-clone](./lib/deep-clone.js)
+
+Returns deep clone of the passed object. Does not work with circular links.
+
+It's useful when one needs to deeply cone an object. `Object.assign` does not work in this case,
+because it creates shadow copy.
+
 ### [format-number-string](./lib/format-number-string.js)
 
 Formats a number (or a string with number inside) using the passed format.
