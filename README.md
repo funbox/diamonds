@@ -5,6 +5,13 @@ and will use in the future ones.
 
 ## List of snippets
 
+### [body-scroll](./lib/body-scroll.js)
+
+Exports two functions: the first one disables scroll (but saving the current scrolled state),
+the second one enables the scroll and restores its state.
+
+It's useful when one wants to disable scroll while opening sidebar and enable it while closing. 
+
 ### [check-input-type-support](./lib/check-input-type-support.js)
 
 Checks browser support of the passed `type` attribute value for `input` tag.
