@@ -30,6 +30,13 @@ Converts DataURI string into Blob instance.
 
 It's useful when one needs to send an image from online editor to the server.
 
+### [debounce](./lib/debounce.js)
+
+Returns a debounced function that delays invoking callback until after passed seconds have elapsed since the last time 
+the debounced function was invoked. 
+
+It's useful when one have to handle scroll events but want to fire callback after the events flow finishes.
+
 ### [format-number-string](./lib/format-number-string.js)
 
 Formats a number (or a string with number inside) using the passed format.
