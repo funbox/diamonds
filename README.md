@@ -135,6 +135,12 @@ Converts kebab-case string into camelCase.
 
 Converts the passed object which contains primitive values into the query string. 
 
+### [omit](./lib/omit.js)
+
+Returns the passed object without the passed keys.
+
+E.g. in React: `omit(this.props, 'mods', 'mix')`.
+
 ### [rgb-to-hex](./lib/rgb-to-hex.js)
 
 Transforms RBG color into HEX.
