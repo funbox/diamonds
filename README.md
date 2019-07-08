@@ -1,4 +1,4 @@
-# Snippets
+# @funboxteam/snippets
 
 This is a set of snippets that we use in the current projects 
 and will use in the future ones. 
