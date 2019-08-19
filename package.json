@@ -4,14 +4,20 @@
   "description": "JS snippets for everyday use",
   "scripts": {
     "precommit": "lint-staged",
-    "postcommit": "git update-index --again"
+    "postcommit": "git update-index --again",
+    "build": "babel lib --out-dir dist"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "author": "Igor Adamenko <mail@igoradamenko.com> (https://igoradamenko.com)",
   "repository": {
     "type": "git",
     "url": "https://github.com/funbox/diamonds"
   },
   "devDependencies": {
+    "@babel/cli": "7.5.5",
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
     "@funboxteam/eslint-config": "4.12.0",
     "eslint": "5.3.0",
     "husky": "0.14.3",

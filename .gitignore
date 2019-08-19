@@ -65,3 +65,6 @@ jsconfig.json
 # -- Linters --
 .eslintcache
 .stylelintcache
+
+# -- Project --
+/dist
