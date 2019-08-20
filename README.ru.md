@@ -1,12 +1,26 @@
-# @funboxteam/snippets
+# @funboxteam/utils
 
-В этом репозитории хранится набор различных сниппетов,
+В этом репозитории хранится набор различных хелперов,
 которые когда-то пригодились нам в проектах,
 и возможно ещё пригодятся в будущем.
 
-## Список сниппетов
+## Установка
 
-### [body-scroll](./lib/body-scroll.js)
+Добавить пакет в зависимости:
+
+```sh
+npm install --save @funboxteam/utils 
+```
+
+Импортировать необходимые функции:
+
+```js
+import { getUniqueId } from '@funboxteam/utils';
+```
+
+## Список хэлперов
+
+### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.js)
 
 Состоит из двух функций: одна отключает скролл (с сохранением местоположения),
 а другая возвращает всё как было.
@@ -14,11 +28,11 @@
 Пригождается, когда нужно, например, 
 отключить скролл при открытии сайдбара, а при закрытии включить. 
 
-### [camel-to-kebab](./lib/camel-to-kebab.js)
+### [camelToKebab](./lib/camel-to-kebab.js)
 
 Переводит строку из camelCase в kebab-case.
 
-### [check-input-type-support](./lib/check-input-type-support.js)
+### [checkInputTypeSupport](./lib/check-input-type-support.js)
 
 Проверяет поддержку браузером переданного значения атрибута `type` блока `input`.
 
@@ -32,7 +46,7 @@
 
 Пригождается, когда нужно раскрасить логи в консоли.
 
-### [datauri-to-blob](./lib/datauri-to-blob.js)
+### [datauriToBlob](./lib/datauri-to-blob.js)
 
 Конвертирует DataURI строку в объект Blob. 
 
@@ -47,7 +61,7 @@
 Пригождается, когда нужно, например, повесить обработчик на скролл,
 который вызовется только через N мс после завершения потока событий.
 
-### [deep-clone](./lib/deep-clone.js)
+### [deepClone](./lib/deep-clone.js)
 
 Создаёт подробную копию переданного объекта. Не работает с циклическими ссылками.
 
@@ -55,7 +69,7 @@
 (т. к. просто `Object.assign` не подходит, ибо создаёт только поверхностную копию, 
 и если у объекта есть вложенные объекты, они не копируются, а линкуются).
 
-### [deep-flatten](./lib/deep-flatten.js)
+### [deepFlatten](./lib/deep-flatten.js)
 
 Возвращает одномерный массив, взамен переданного n-мерного.
 
@@ -63,7 +77,7 @@
 
 Производит «глубокое» сравнение двух переданных параметров.
 
-### [format-number-string](./lib/format-number-string.js)
+### [formatNumberString](./lib/format-number-string.js)
 
 Форматирует число (или корректную строку с числом) по правилам русской типографики.
 
@@ -75,21 +89,21 @@
 
 Пригождается, когда нужно отформатировать, например, стоимость чего-то.
 
-### [format-phone-number-string](./lib/format-phone-number-string.js)
+### [formatPhoneNumberString](./lib/format-phone-number-string.js)
 
 Форматирует число (или корректную строку с числом) по маске мобильных номеров телефонов РФ.
 
-### [get-browser-scrollbar-width](./lib/get-browser-scrollbar-width.js)
+### [getBrowserScrollbarWidth](./lib/get-browser-scrollbar-width.js)
 
 Возвращает ширину скроллбара в браузере.
 
-### [get-hostname-from-string](./lib/get-hostname-from-string.js)
+### [getHostnameFromString](./lib/get-hostname-from-string.js)
 
 Извлекает домен из строки.
 Пригождается, когда это необходимо делать в браузерах,
 которые не поддерживают [класс URL](https://developer.mozilla.org/en-US/docs/Web/API/URL).
 
-### [get-object-path](./lib/get-object-path.js)
+### [getObjectPath](./lib/get-object-path.js)
 
 Возвращает свойство из объекта по указанному «пути».
 
@@ -97,18 +111,18 @@
 и не хочется писать длинные условия. 
 `getObjectPath(obj, 'key1.key2.key3')` и готово. 
 
-### [get-plural](./lib/get-plural.js)
+### [getPlural](./lib/get-plural.js)
 
 Выбирает и возвращает правильное название единиц для переданного числа.
 
 Пригождается, когда в зависимости от числа нужно менять связанное с ним слово:
 «1 день», «2 дня», «5 дней». 
 
-### [get-random-num](./lib/get-random-num.js)
+### [getRandomNum](./lib/get-random-num.js)
 
 Возвращает [псевдослучайное число](https://ru.wikipedia.org/wiki/Генератор_псевдослучайных_чисел) в указанном диапазоне.
 
-### [get-unique-id](./lib/get-unique-id.js)
+### [getUniqueId](./lib/get-unique-id.js)
 
 Возвращает строку сгенерированную по принципу «префикс-число», 
 где префикс — это значение переданного параметра (или «id»),
@@ -117,30 +131,30 @@
 Пригождается, когда нужно, например, контролам на странице выдать уникальные ID,
 чтобы связать их с лэйблами.  
 
-### [hex-to-rgb](./lib/hex-to-rgb.js)
+### [hexToRgb](./lib/hex-to-rgb.js)
 
 Переводит hex-нотацию цвета в RGB-нотацию.
 
-### [is-element-in-viewport](./lib/is-element-in-viewport.js)
+### [isElementInViewport](./lib/is-element-in-viewport.js)
 
 Возвращает `true`, если переданный элемент полностью 
 (или нет, в зависимости от настроек) виден во вьюпорте пользователя. 
 
-### [is-email-valid](./lib/is-email-valid.js)
+### [isEmailValid](./lib/is-email-valid.js)
 
 Возвращает `true`, если переданная строка — валидный адрес эл. почты.
 
-### [is-mobile](./lib/is-mobile.js)
+### [isMobile](./lib/is-mobile.js)
 
 Возвращает `true`, если по UA кажется, что браузер пользователя мобильный.
 
 Пригождается, когда не нужна точная проверка (используемые внутри проверки довольно простые).
 
-### [kebab-to-camel](./lib/kebab-to-camel.js)
+### [kebabToCamel](./lib/kebab-to-camel.js)
 
 Переводит строку из kebab-case в camelCase.
 
-### [object-to-query-string](./lib/object-to-query-string.js)
+### [objectToQueryString](./lib/object-to-query-string.js)
 
 Превращает объект, в котором значения ключей представлены примитивными типами,
 в query-строку.
@@ -151,7 +165,7 @@
 
 Типичный пример использования в Реакте: `omit(this.props, 'mods', 'mix')`.
 
-### [rgb-to-hex](./lib/rgb-to-hex.js)
+### [rgbToHex](./lib/rgb-to-hex.js)
 
 Переводит RGB-нотацию цвета в hex-нотацию.
 
