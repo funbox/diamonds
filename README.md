@@ -30,7 +30,7 @@ It's useful when one wants to disable scroll while opening sidebar and enable it
 
 Converts camelCase string into kebab-case.
 
-### [checkInputTypeSupport](./lib/check-input-type-support.js)
+### [isInputTypeSupported](./lib/is-input-type-supported.js)
 
 Checks browser support of the passed `type` attribute value for `input` tag.
 

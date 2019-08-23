@@ -32,7 +32,7 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 Переводит строку из camelCase в kebab-case.
 
-### [checkInputTypeSupport](./lib/check-input-type-support.js)
+### [isInputTypeSupported](./lib/is-input-type-supported.js)
 
 Проверяет поддержку браузером переданного значения атрибута `type` блока `input`.
 
