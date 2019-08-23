@@ -1,7 +1,7 @@
 {
   "name": "@funboxteam/helpers",
-  "version": "1.0.1",
-  "description": "JS snippets for everyday use",
+  "version": "2.0.0",
+  "description": "JS helpers for everyday use",
   "scripts": {
     "precommit": "lint-staged",
     "postcommit": "git update-index --again",
