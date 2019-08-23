@@ -1,4 +1,4 @@
-# @funboxteam/utils
+# @funboxteam/helpers
 
 This is a set of helpers that we use in the current projects 
 and will use in the future ones. 
@@ -8,13 +8,13 @@ and will use in the future ones.
 Add the package to deps:
 
 ```sh
-npm install --save @funboxteam/utils 
+npm install --save @funboxteam/helpers 
 ```
 
 Import functions:
 
 ```js
-import { getUniqueId } from '@funboxteam/utils';
+import { getUniqueId } from '@funboxteam/helpers';
 ```
 
 ## List of helpers

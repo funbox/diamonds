@@ -1,4 +1,4 @@
-# @funboxteam/utils
+# @funboxteam/helpers
 
 В этом репозитории хранится набор различных хелперов,
 которые когда-то пригодились нам в проектах,
@@ -9,13 +9,13 @@
 Добавить пакет в зависимости:
 
 ```sh
-npm install --save @funboxteam/utils 
+npm install --save @funboxteam/helpers 
 ```
 
 Импортировать необходимые функции:
 
 ```js
-import { getUniqueId } from '@funboxteam/utils';
+import { getUniqueId } from '@funboxteam/helpers';
 ```
 
 ## Список хэлперов

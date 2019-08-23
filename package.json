@@ -1,5 +1,5 @@
 {
-  "name": "@funboxteam/utils",
+  "name": "@funboxteam/helpers",
   "version": "1.0.1",
   "description": "JS snippets for everyday use",
   "scripts": {
