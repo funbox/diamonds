@@ -154,6 +154,10 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 Переводит строку из kebab-case в camelCase.
 
+### [queryStringToObject](./lib/query-string-to-object.js)
+
+Превращает query-строку в объект.
+
 ### [objectToQueryString](./lib/object-to-query-string.js)
 
 Превращает объект, в котором значения ключей представлены примитивными типами,

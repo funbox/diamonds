@@ -145,6 +145,10 @@ It is useful when one doesn't need a precise check (the checks that are used ins
 
 Converts kebab-case string into camelCase.
 
+### [queryStringToObject](./lib/query-string-to-object.js)
+
+Converts query-string into object.
+
 ### [objectToQueryString](./lib/object-to-query-string.js)
 
 Converts the passed object which contains primitive values into the query string. 
