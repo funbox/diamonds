@@ -9,6 +9,7 @@
     "build": "babel lib --out-dir dist",
     "prepublishOnly": "npm run build"
   },
+  "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
   "author": "Igor Adamenko <mail@igoradamenko.com> (https://igoradamenko.com)",
