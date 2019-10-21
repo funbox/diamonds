@@ -5,6 +5,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "postcommit": "git update-index --again",
+    "prebuild": "rm -rf dist",
     "build": "babel lib --out-dir dist",
     "prepublishOnly": "npm run build"
   },
