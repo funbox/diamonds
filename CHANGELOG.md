@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.0 (22.10.2019)
+
+Added `sideEffects: false` into package.json to enable webpack's tree shaking.
+
+
 ## 2.1.0 (04.10.2019)
 
 Added [queryStringToObject](./lib/query-string-to-object.js).
