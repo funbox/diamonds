@@ -90,6 +90,11 @@ Formats a number (or a string with number inside) by mask of Russian MSISDNs.
 
 Returns browser scrollbar width.
 
+### [getDisplayName](./lib/get-display-name.js)
+
+Returns [displayName](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging)
+for HOC.
+
 ### [getHostnameFromString](./lib/get-hostname-from-string.js)
 
 Extracts domain from the string.

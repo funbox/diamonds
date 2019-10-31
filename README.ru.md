@@ -97,6 +97,12 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 Возвращает ширину скроллбара в браузере.
 
+### [getDisplayName](./lib/get-display-name.js)
+
+Используется при формировании свойства
+[displayName](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging)
+для HOC-компонентов.
+
 ### [getHostnameFromString](./lib/get-hostname-from-string.js)
 
 Извлекает домен из строки.
