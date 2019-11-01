@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.0 (01.11.2019)
+
+Added [getDisplayName](./lib/get-display-name.js).
+
+
 ## 2.2.0 (22.10.2019)
 
 Added `sideEffects: false` into package.json to enable webpack's tree shaking.
