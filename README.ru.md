@@ -179,6 +179,10 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 Переводит RGB-нотацию цвета в hex-нотацию.
 
+### [storage](./lib/storage.js)
+
+Предоставляет возможность безопасного использования `localStorage`.
+
 ### [throttle](./lib/throttle.js)
 
 Превращает переданный колбэк в функцию,

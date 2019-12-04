@@ -168,6 +168,10 @@ E.g. in React: `omit(this.props, 'mods', 'mix')`.
 
 Transforms RBG color into HEX.
 
+### [storage](./lib/storage.js)
+
+Makes it possible to use `localStorage` safely. 
+
 ### [throttle](./lib/throttle.js)
 
 Transforms the passed callback into the functions that delays callback firing.
