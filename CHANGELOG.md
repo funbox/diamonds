@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.0 (04.12.2019)
+
+Added [storage](./lib/storage.js).
+
+
 ## 2.3.0 (01.11.2019)
 
 Added [getDisplayName](./lib/get-display-name.js).
