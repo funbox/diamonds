@@ -1,6 +1,6 @@
 {
   "name": "@funboxteam/helpers",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "JS helpers for everyday use",
   "scripts": {
     "precommit": "lint-staged",

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.1 (05.12.2019)
+
+`storage` export was fixed.
+
+
 ## 2.4.0 (04.12.2019)
 
 Added [storage](./lib/storage.js).
