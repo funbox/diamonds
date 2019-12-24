@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.5.0 (24.12.2019)
+
+Added [get-image-orientation](./lib/get-image-orientation.js).
+
+
 ## 2.4.1 (05.12.2019)
 
 `storage` export was fixed.
