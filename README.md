@@ -102,6 +102,34 @@ Extracts domain from the string.
 It's useful when one need to do this in the 
 [browsers without URL support](https://developer.mozilla.org/en-US/docs/Web/API/URL).
 
+### [getImageOrientation](./lib/get-image-orientation.js)
+
+Extracts orientation from the passed images EXIF.
+
+Example:
+
+```javascript
+getImageOrientation.call(this, image, orientation => {
+  let rotate;
+
+  switch (orientation) {
+    case 8:
+      rotate = 270;
+      break;
+    case 6:
+      rotate = 90;
+      break;
+    case 3:
+      rotate = 180;
+      break;
+    default:
+      rotate = 0;
+  }
+
+  this.setState({ rotate });
+});
+```
+
 ### [getObjectPath](./lib/get-object-path.js)
 
 Gets the value at path of object.
