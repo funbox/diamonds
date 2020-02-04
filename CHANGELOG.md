@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.6.0 (04.02.2020)
+
+Added functions for ruling mocks settings using cookies.
+
+
 ## 2.5.0 (24.12.2019)
 
 Added [get-image-orientation](./lib/get-image-orientation.js).
