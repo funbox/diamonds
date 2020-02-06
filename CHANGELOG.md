@@ -1,8 +1,9 @@
 # Changelog
 
-## 2.6.0 (04.02.2020)
+## 2.6.0 (06.02.2020)
 
-Added functions for ruling mocks settings using cookies.
+Added [functions](./lib/mock-settings.js) for ruling mocks settings using `ci-mode=dev` cookie,
+which is checked, set or removed for the special domain.
 
 
 ## 2.5.0 (24.12.2019)
