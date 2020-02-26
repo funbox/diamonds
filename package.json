@@ -5,12 +5,12 @@
   "scripts": {
     "lint": "eslint --cache -c .eslintrc.js --ext .js lib",
     "prebuild": "npm run lint && rm -rf dist",
-    "build": "babel lib --out-dir dist",
+    "build": "BABEL_ENV=esm babel lib --out-dir dist/esm && BABEL_ENV=node babel lib --out-dir dist/cjs",
     "prepublishOnly": "npm run build"
   },
   "sideEffects": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "author": "Igor Adamenko <mail@igoradamenko.com> (https://igoradamenko.com)",
   "repository": {
     "type": "git",
