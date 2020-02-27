@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.0.0 (27.02.2020)
+
+Added CommonJS version for scripts to make it possible to use them in Node.js env.
+
+To make it work we had to change [isMobile](./lib/is-mobile.js) notation. For now this helpers exports 
+a function that returns value, not the value itself.
+
+
 ## 2.6.0 (06.02.2020)
 
 Added [functions](./lib/mock-settings.js) for ruling mocks settings using `ci-mode=dev` cookie,
@@ -39,6 +47,8 @@ Added [queryStringToObject](./lib/query-string-to-object.js).
 ## 2.0.0 (23.07.2019)
 
 Added Babel, prepared the package for publishing to npm.
+
+Also renamed the package into @funboxteam/helpers.
 
 
 ## 1.0.1 (08.07.2019)
