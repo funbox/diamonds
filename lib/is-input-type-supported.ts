@@ -1,4 +1,4 @@
-export default (inputType) => {
+export default (inputType: string) => {
   const inputElem = document.createElement('input');
   const smile = '1)';
   let bool;
@@ -13,12 +13,11 @@ export default (inputType) => {
     inputElem.value = smile;
     inputElem.style.cssText = 'position:absolute;visibility:hidden;';
 
-    if (/^range$/.test(inputType) && inputElem.style.WebkitAppearance !== undefined) {
+    if (/^range$/.test(inputType) && inputElem.style.webkitAppearance !== undefined) {
       document.appendChild(inputElem);
-      defaultView = document.defaultView;
 
-      bool = defaultView.getComputedStyle
-        && defaultView.getComputedStyle(inputElem, null).WebkitAppearance !== 'textfield'
+      bool = window.getComputedStyle
+        && window.getComputedStyle(inputElem, null).webkitAppearance !== 'textfield'
         && (inputElem.offsetHeight !== 0);
 
       document.removeChild(inputElem);
