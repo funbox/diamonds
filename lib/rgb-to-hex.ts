@@ -1,6 +1,6 @@
 /* eslint-disable no-bitwise */
 
-export default (r, g, b) => {
+export default (r: number, g: number, b: number) => {
   let result = ((r << 16) + (g << 8) + b).toString(16);
 
   while (result.length < 6) {
