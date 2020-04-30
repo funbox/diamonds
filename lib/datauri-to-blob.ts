@@ -1,4 +1,4 @@
-export default (dataURI) => {
+export default (dataURI: string) => {
   const byteString = dataURI.split(',')[0].indexOf('base64') >= 0
     ? atob(dataURI.split(',')[1])
     : decodeURIComponent(dataURI.split(',')[1]);
