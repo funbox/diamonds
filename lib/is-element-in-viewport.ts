@@ -1,4 +1,4 @@
-export default (el, { partially = false } = {}) => {
+export default (el: HTMLElement, { partially = false } = {}) => {
   const { top, left, bottom, right } = el.getBoundingClientRect();
   const { innerHeight, innerWidth } = window;
 
