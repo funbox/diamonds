@@ -1,4 +1,4 @@
-export default (n, one, few, many) => {
+export default (n: number, one: string, few: string, many: string): string => {
   if (n % 10 === 1 && n % 100 !== 11) {
     return one;
   }
