@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "JS helpers for everyday use",
   "scripts": {
-    "lint": "eslint --cache -c .eslintrc.js --ext .js lib",
+    "lint": "eslint --cache -c .eslintrc.js --ext .js,.ts lib",
     "prebuild": "npm run lint && rm -rf dist",
     "build": "tsc --declaration true --declarationDir ./dist/types && tsc --outDir ./dist/cjs --module CommonJS",
     "prepublishOnly": "npm run build"

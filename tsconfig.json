@@ -8,6 +8,7 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "outDir": "dist/esm",
+    "strictFunctionTypes": true,
     "strictNullChecks": true,
     "target": "es5"
   },
