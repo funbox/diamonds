@@ -15,6 +15,6 @@ export function disableMocks() {
   setCiModeCookie(new Date(now.getTime() - DAY));
 }
 
-function setCiModeCookie(expiresAt) {
+function setCiModeCookie(expiresAt: Date) {
   document.cookie = `ci-mode=dev; domain=removed-for-privacy.com; path=/; expires=${expiresAt.toUTCString()}`;
 }
