@@ -1,4 +1,4 @@
-function enableBodyScroll() {
+export function enableBodyScroll(): void {
   if (document.readyState === 'complete') {
     document.body.style.position = '';
     document.body.style.overflowY = '';
@@ -13,7 +13,7 @@ function enableBodyScroll() {
   }
 }
 
-function disableBodyScroll({ savePosition } = {}) {
+export function disableBodyScroll({ savePosition = false }: { savePosition?: boolean } = {}): void {
   if (document.readyState === 'complete') {
     if (document.body.scrollHeight > window.innerHeight) {
       if (savePosition) document.body.style.marginTop = `-${window.pageYOffset}px`;
@@ -21,8 +21,6 @@ function disableBodyScroll({ savePosition } = {}) {
       document.body.style.overflowY = 'scroll';
     }
   } else {
-    window.addEventListener('load', disableBodyScroll);
+    window.addEventListener('load', () => disableBodyScroll());
   }
 }
-
-export { enableBodyScroll, disableBodyScroll };
