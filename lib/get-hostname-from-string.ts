@@ -1,8 +1,8 @@
-export default (url: string) => {
+export default (url: string): string => {
   let hostname;
   // find & remove protocol (http, ftp, etc.) and get hostname
 
-  if (url.indexOf('//') > -1) {
+  if (url.includes('//')) {
     hostname = url.split('/')[2];
   } else {
     hostname = url.split('/')[0];

@@ -1,8 +1,7 @@
-export default (inputType: string) => {
+export default (inputType: string): boolean => {
   const inputElem = document.createElement('input');
   const smile = '1)';
   let bool;
-  let defaultView;
   inputElem.setAttribute('type', inputType);
   bool = inputElem.type !== 'text' && 'style' in inputElem;
 

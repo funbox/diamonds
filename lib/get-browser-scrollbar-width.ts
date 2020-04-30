@@ -1,4 +1,4 @@
-export default () => {
+export default (): number => {
   const scrollDiv = document.createElement('div');
   document.body.appendChild(scrollDiv);
 

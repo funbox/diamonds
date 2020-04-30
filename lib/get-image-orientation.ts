@@ -1,8 +1,8 @@
-export default (file: Blob, callback: (orientation: number) => any) => {
+export default (file: Blob, callback: (orientation: number) => void): void => {
   const reader = new FileReader();
 
-  reader.onload = e => {
-    if (e.target === null) return;
+  reader.onload = (e: ProgressEvent<FileReader>): void => {
+    if (e.target === null) return callback(-1);
 
     const view = new DataView(e.target.result as ArrayBuffer);
 

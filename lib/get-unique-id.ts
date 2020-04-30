@@ -1,3 +1,3 @@
 let lastId = 0;
 
-export default (prefix = 'id') => `${prefix}-${lastId++}`;
+export default (prefix = 'id'): string => `${prefix}-${lastId++}`;

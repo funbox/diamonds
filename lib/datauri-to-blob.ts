@@ -1,5 +1,5 @@
-export default (dataURI: string) => {
-  const byteString = dataURI.split(',')[0].indexOf('base64') >= 0
+export default (dataURI: string): Blob => {
+  const byteString = dataURI.split(',')[0].includes('base64')
     ? atob(dataURI.split(',')[1])
     : decodeURIComponent(dataURI.split(',')[1]);
   const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];

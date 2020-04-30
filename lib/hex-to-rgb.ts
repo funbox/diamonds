@@ -1,7 +1,7 @@
 type RGB = {
-  r: number,
-  g: number,
-  b: number,
+  r: number;
+  g: number;
+  b: number;
 };
 
 export default (hex: string): RGB | null => {

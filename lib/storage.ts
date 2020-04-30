@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 class MemoryStorage {
   private storage: Map<string, string>;
 
@@ -5,28 +7,30 @@ class MemoryStorage {
     this.storage = new Map();
   }
 
-  get length() {
+  get length(): number {
     return this.storage.size;
   }
 
-  getItem(key: string) {
-    return this.storage.get(key.toString());
+  getItem(key: string): string | null {
+    const item = this.storage.get(key.toString());
+
+    return item === undefined ? null : item;
   }
 
-  setItem(key: string, value: any) {
+  setItem(key: string, value: any): void {
     this.storage.set(key.toString(), value.toString());
   }
 
-  removeItem(key: string) {
+  removeItem(key: string): void {
     this.storage.delete(key);
   }
 
-  clear() {
+  clear(): void {
     this.storage.clear();
   }
 }
 
-function storageService() {
+function storageService(): Storage | MemoryStorage {
   const suffix = +new Date();
   let storage;
 
