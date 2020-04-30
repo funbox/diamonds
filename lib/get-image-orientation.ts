@@ -1,8 +1,10 @@
-export default (file, callback) => {
+export default (file: Blob, callback: (orientation: number) => any) => {
   const reader = new FileReader();
 
   reader.onload = e => {
-    const view = new DataView(e.target.result);
+    if (e.target === null) return;
+
+    const view = new DataView(e.target.result as ArrayBuffer);
 
     if (view.getUint16(0, false) !== 0xFFD8) {
       return callback(-2);
