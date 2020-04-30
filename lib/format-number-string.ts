@@ -1,4 +1,4 @@
-export default (num, {
+export default (num: number, {
   space = ' ', // just space, but nbsp; may also be passed here
   delimiter = ',',
   minus = '−',
