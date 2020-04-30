@@ -1,4 +1,4 @@
-export default (url) => {
+export default (url: string) => {
   let hostname;
   // find & remove protocol (http, ftp, etc.) and get hostname
 
