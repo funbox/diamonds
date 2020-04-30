@@ -1,4 +1,6 @@
 class MemoryStorage {
+  private storage: Map<string, string>;
+
   constructor() {
     this.storage = new Map();
   }
@@ -7,15 +9,15 @@ class MemoryStorage {
     return this.storage.size;
   }
 
-  getItem(key) {
+  getItem(key: string) {
     return this.storage.get(key.toString());
   }
 
-  setItem(key, value) {
+  setItem(key: string, value: any) {
     this.storage.set(key.toString(), value.toString());
   }
 
-  removeItem(key) {
+  removeItem(key: string) {
     this.storage.delete(key);
   }
 
@@ -30,7 +32,7 @@ function storageService() {
 
   try {
     storage = window.localStorage;
-    storage.setItem(`__storage${suffix}`, 1);
+    storage.setItem(`__storage${suffix}`, '1');
     storage.removeItem(`__storage${suffix}`);
   } catch (e) {
     storage = new MemoryStorage();
