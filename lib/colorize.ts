@@ -1,5 +1,5 @@
 // example: console.log(colorize('foo', 'bar').red);
-export default (...args) => {
+export default (...args: string[]) => {
   const str = args.join(' ');
 
   return {
