@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint --cache -c .eslintrc.js --ext .js lib",
     "prebuild": "npm run lint && rm -rf dist",
-    "build": "BABEL_ENV=esm babel lib --out-dir dist/esm && BABEL_ENV=node babel lib --out-dir dist/cjs",
+    "build": "tsc --declaration true --declarationDir ./dist/types && tsc --outDir ./dist/cjs --module CommonJS",
     "prepublishOnly": "npm run build"
   },
   "sideEffects": false,
