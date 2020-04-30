@@ -1,18 +1,12 @@
-const styles = {
-  width: '100px',
-  height: '100px',
-  overflow: 'scroll',
-  position: 'absolute',
-  top: '-9999px',
-};
-
 export default () => {
   const scrollDiv = document.createElement('div');
   document.body.appendChild(scrollDiv);
 
-  Object.keys(styles).forEach(key => {
-    scrollDiv.style[key] = styles[key];
-  });
+  scrollDiv.style.width = '100px';
+  scrollDiv.style.height = '100px';
+  scrollDiv.style.overflow = 'scroll';
+  scrollDiv.style.position = 'absolute';
+  scrollDiv.style.top = '-9999px';
 
   const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
 
