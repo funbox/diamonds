@@ -11,6 +11,7 @@
   "sideEffects": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "author": "Igor Adamenko <mail@igoradamenko.com> (https://igoradamenko.com)",
   "repository": {
     "type": "git",
