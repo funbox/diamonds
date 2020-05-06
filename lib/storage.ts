@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 class MemoryStorage {
   private storage: Map<string, string>;
 
@@ -17,7 +15,7 @@ class MemoryStorage {
     return item === undefined ? null : item;
   }
 
-  setItem(key: string, value: any): void {
+  setItem(key: string, value: { toString: () => string }): void {
     this.storage.set(key.toString(), value.toString());
   }
 
