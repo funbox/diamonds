@@ -1,6 +1,7 @@
-/* eslint-disable no-restricted-syntax, no-prototype-builtins, @typescript-eslint/no-explicit-any */
+/* eslint-disable no-restricted-syntax, no-prototype-builtins, @typescript-eslint/no-explicit-any, import/export */
 
-export default function deepClone(obj: any): any {
+export function deepClone<T>(obj: T): T;
+export function deepClone(obj: any): any {
   if (obj === null || typeof obj !== 'object') return obj;
 
   if (obj instanceof Date) {

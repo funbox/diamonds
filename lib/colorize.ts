@@ -1,8 +1,9 @@
-type colors = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white';
-type bgColors = 'bgBlack' | 'bgRed' | 'bgGreen' | 'bgYellow' | 'bgBlue' | 'bgMagenta' | 'bgCyan' | 'bgWhite';
+type colors = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' |
+  'bgBlack' | 'bgRed' | 'bgGreen' | 'bgYellow' | 'bgBlue' | 'bgMagenta' | 'bgCyan' | 'bgWhite';
+
 
 // example: console.log(colorize('foo', 'bar').red);
-export default (...args: string[]): Record<colors | bgColors, string> => {
+export default (...args: string[]): Record<colors, string> => {
   const str = args.join(' ');
 
   return {

@@ -2,7 +2,7 @@
 
 type DebouncedFunction = (...args: any[]) => void;
 
-export default (fn: () => void, ms = 0): DebouncedFunction => {
+export default (fn: DebouncedFunction, ms = 0): DebouncedFunction => {
   let timeoutId: number;
   return function (this: any, ...args: any[]): void { // eslint-disable-line func-names
     window.clearTimeout(timeoutId);
