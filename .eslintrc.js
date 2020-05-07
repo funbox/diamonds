@@ -21,13 +21,13 @@ module.exports = {
     '@typescript-eslint/prefer-includes': 'off',
   },
   settings: {
-    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/extensions': ['.ts'],
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts'],
     },
     'import/resolver': {
       node: {
-        extensions:['.js', '.jsx', '.ts', '.tsx'],
+        extensions:['.ts'],
       }
     }
   },
