@@ -5,7 +5,9 @@
   "scripts": {
     "lint": "eslint --cache -c .eslintrc.js --ext .js,.ts lib",
     "prebuild": "npm run lint && rm -rf dist",
-    "build": "tsc --declaration true --declarationDir ./dist/types && tsc --outDir ./dist/cjs --module CommonJS",
+    "build-cjs": "tsc --outDir ./dist/cjs --module CommonJS",
+    "build-esm-and-types": "tsc --outDir ./dist/esm --module ES6 --declaration true --declarationDir ./dist/types",
+    "build": "npm run build-esm-and-types && npm run build-cjs",
     "prepublishOnly": "npm run build"
   },
   "sideEffects": false,

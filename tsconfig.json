@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
     "lib": ["es2017", "es7", "es6", "dom"],
-    "module": "ES6",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "outDir": "dist/esm",
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "target": "es5"
