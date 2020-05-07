@@ -2,7 +2,7 @@ export default (url: string): string => {
   let hostname;
   // find & remove protocol (http, ftp, etc.) and get hostname
 
-  if (url.includes('//')) {
+  if (url.indexOf('//') > -1) {
     hostname = url.split('/')[2];
   } else {
     hostname = url.split('/')[0];

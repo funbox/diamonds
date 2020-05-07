@@ -13,7 +13,7 @@ export function enableBodyScroll(): void {
   }
 }
 
-export function disableBodyScroll({ savePosition = false }: { savePosition?: boolean } = {}): void {
+export function disableBodyScroll({ savePosition = false } = {}): void {
   if (document.readyState === 'complete') {
     if (document.body.scrollHeight > window.innerHeight) {
       if (savePosition) document.body.style.marginTop = `-${window.pageYOffset}px`;

@@ -3,7 +3,7 @@ export { default as camelToKebab } from './camel-to-kebab';
 export { default as colorize } from './colorize';
 export { default as datauriToBlob } from './datauri-to-blob';
 export { default as debounce } from './debounce';
-export { deepClone } from './deep-clone';
+export { default as deepClone } from './deep-clone';
 export { default as deepFlatten } from './deep-flatten';
 export { default as equals } from './equals';
 export { default as formatNumberString } from './format-number-string';

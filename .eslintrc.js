@@ -18,6 +18,7 @@ module.exports = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/prefer-includes': 'off',
   },
   settings: {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
