@@ -2,7 +2,7 @@ export default (file: Blob, callback: (orientation: number) => void): void => {
   const reader = new FileReader();
 
   reader.onload = (e: ProgressEvent<FileReader>): void => {
-    if (e.target === null) return callback(-1);
+    if (e.target === null) throw new Error('Event target is undefined');
 
     const view = new DataView(e.target.result as ArrayBuffer);
 
