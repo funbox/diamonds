@@ -1,10 +1,8 @@
 export default (file: Blob, callback: (orientation: number) => void): void => {
   const reader = new FileReader();
 
-  reader.onload = (e: ProgressEvent<FileReader>): void => {
-    if (e.target === null) throw new Error('Event target is undefined');
-
-    const view = new DataView(e.target.result as ArrayBuffer);
+  reader.onload = (): void => {
+    const view = new DataView(reader.result as ArrayBuffer);
 
     if (view.getUint16(0, false) !== 0xFFD8) {
       return callback(-2);
