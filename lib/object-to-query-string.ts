@@ -1,5 +1,7 @@
-const join = (obj: Record<string, string>): string => Object.keys(obj)
+type QueryStringValue = string | number | boolean;
+
+const join = (obj: Record<string, QueryStringValue>): string => Object.keys(obj)
   .map(key => `${key}=${encodeURIComponent(obj[key])}`)
   .join('&');
 
-export default (params: Record<string, string>): string => `?${join(params)}`;
+export default (params: Record<string, QueryStringValue>): string => `?${join(params)}`;
