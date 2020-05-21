@@ -3,9 +3,9 @@
 type DebouncedFunction = (...args: any[]) => void;
 
 export default (fn: DebouncedFunction, ms = 0): DebouncedFunction => {
-  let timeoutId: number;
+  let timeoutId: ReturnType<typeof setTimeout>;
   return function (this: any, ...args: any[]): void { // eslint-disable-line func-names
-    window.clearTimeout(timeoutId);
-    timeoutId = window.setTimeout(() => fn.apply(this, args), ms);
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
   };
 };
