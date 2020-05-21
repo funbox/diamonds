@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "importHelpers": true,
     "lib": ["es2017", "es7", "es6", "dom"],
     "moduleResolution": "node",
     "noEmitOnError": true,
