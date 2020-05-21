@@ -25,9 +25,6 @@
     "README.md"
   ],
   "devDependencies": {
-    "@babel/cli": "7.5.5",
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
     "@funboxteam/eslint-config": "4.12.0",
     "@types/node": "14.0.4",
     "@typescript-eslint/eslint-plugin": "2.30.0",
