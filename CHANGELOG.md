@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.0.0 (19.06.2020)
+
+Rewrote the lib to TypeScript.
+
+Removed `deepFlatten` & `getHostnameFromString`.
+
+
 ## 3.0.0 (27.02.2020)
 
 Added CommonJS version for scripts to make it possible to use them in Node.js env.

@@ -104,12 +104,6 @@ import { getUniqueId } from '@funboxteam/helpers';
 [displayName](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging)
 для HOC-компонентов.
 
-### [getHostnameFromString](./lib/get-hostname-from-string.js)
-
-Извлекает домен из строки.
-Пригождается, когда это необходимо делать в браузерах,
-которые не поддерживают [класс URL](https://developer.mozilla.org/en-US/docs/Web/API/URL).
-
 ### [getImageOrientation](./lib/get-image-orientation.js)
 
 Извлекает из Exif информацию об ориентации изображения.

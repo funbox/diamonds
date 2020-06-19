@@ -96,13 +96,6 @@ Returns browser scrollbar width.
 Returns [displayName](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging)
 for HOC.
 
-### [getHostnameFromString](./lib/get-hostname-from-string.js)
-
-Extracts domain from the string.
-
-It's useful when one need to do this in the 
-[browsers without URL support](https://developer.mozilla.org/en-US/docs/Web/API/URL).
-
 ### [getImageOrientation](./lib/get-image-orientation.js)
 
 Extracts orientation from the passed images EXIF.
