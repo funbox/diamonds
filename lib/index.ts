@@ -4,7 +4,6 @@ export { default as colorize } from './colorize';
 export { default as datauriToBlob } from './datauri-to-blob';
 export { default as debounce } from './debounce';
 export { default as deepClone } from './deep-clone';
-export { default as deepFlatten } from './deep-flatten';
 export { default as equals } from './equals';
 export { default as formatNumberString } from './format-number-string';
 export { default as formatPhoneNumberString } from './format-phone-number-string';

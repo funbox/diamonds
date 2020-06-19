@@ -67,10 +67,6 @@ Returns deep clone of the passed object. Does not work with circular links.
 It's useful when one needs to deeply cone an object. `Object.assign` does not work in this case,
 because it creates shadow copy.
 
-### [deepFlatten](./lib/deep-flatten.js)
-
-Transforms n-dimensional array into one-dimensional. 
-
 ### [equals](./lib/equals.js)
 
 Deeply compares passed params.
