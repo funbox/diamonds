@@ -21,6 +21,6 @@ export function disableBodyScroll({ savePosition = false } = {}): void {
       document.body.style.overflowY = 'scroll';
     }
   } else {
-    window.addEventListener('load', () => disableBodyScroll());
+    window.addEventListener('load', () => disableBodyScroll({ savePosition }));
   }
 }
