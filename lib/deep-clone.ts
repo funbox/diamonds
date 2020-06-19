@@ -1,3 +1,5 @@
+// This function is too multipurpose so we allow `any` here.
+// Also there are some constructions that are allowed by linter, but the code will be much more complex w/o them.
 /* eslint-disable no-restricted-syntax, no-prototype-builtins, @typescript-eslint/no-explicit-any */
 
 function deepClone<T>(obj: T): T;

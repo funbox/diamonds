@@ -1,3 +1,4 @@
+// It may compare any values so we allow `any` here.
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export default function equals(a: any, b: any): boolean {

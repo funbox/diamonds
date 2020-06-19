@@ -1,3 +1,4 @@
+// It's just easier with bitwise because we deal with hex.
 /* eslint-disable no-bitwise */
 
 export default (r: number, g: number, b: number): string => {

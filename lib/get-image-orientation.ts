@@ -1,3 +1,6 @@
+// The function works with binary data, so we allow bitwise operations here.
+/* eslint-disable no-bitwise */
+
 // https://stackoverflow.com/a/32490603
 
 const NOT_JPEG = -2;
@@ -52,7 +55,7 @@ export default (file: Blob, callback: CallbackType): void => {
             return callback(view.getUint16(offset + (i * 12) + 8, little) as imageOrientation);
           }
         }
-      } else if ((marker & 0xFF00) !== 0xFF00) { // eslint-disable-line no-bitwise
+      } else if ((marker & 0xFF00) !== 0xFF00) {
         break;
       } else {
         offset += view.getUint16(offset, false);
