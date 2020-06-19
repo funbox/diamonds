@@ -1,5 +1,11 @@
 # Migrations
 
+# 3.0.0 → 4.0.0
+
+`deepFlatten` and `getHostnameFromString` helpers should be replaced on something else, because they were removed 
+from the package.
+
+
 ## 2.6.0 → 3.0.0
 
 In case of using any workarounds for Node.js env, it's possible to remove them. 
