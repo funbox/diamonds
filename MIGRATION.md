@@ -1,6 +1,12 @@
 # Migrations
 
-# 3.0.0 → 4.0.0
+## 4.0.0 → 5.0.0
+
+`areMocksEnabled`, `enableMocks`, and `disableMocks` were removed from the package. So they will be replaced 
+on something else in the dependant projects. 
+
+
+## 3.0.0 → 4.0.0
 
 `deepFlatten` and `getHostnameFromString` helpers should be replaced on something else, because they were removed 
 from the package.

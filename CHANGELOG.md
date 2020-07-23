@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.0.0 (23.07.2020)
+
+Removed `mock-settings.ts`.
+
+
 ## 4.0.0 (19.06.2020)
 
 Rewrote the lib to TypeScript.
