@@ -20,11 +20,6 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 ## Список хэлперов
 
-### [areMocksEnabled, enableMocks, disableMocks](./lib/mock-settings.js)
-
-Три функции для управления моками с помощью куки `ci-mode=dev`, которая 
-проверяется/устанавливается/удаляется/ для специального домена.
-
 ### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.js)
 
 Состоит из двух функций: одна отключает скролл (с сохранением местоположения),

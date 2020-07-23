@@ -20,7 +20,6 @@ export { default as isEmailValid } from './is-email-valid';
 export { default as isInputTypeSupported } from './is-input-type-supported';
 export { default as isMobile } from './is-mobile';
 export { default as kebabToCamel } from './kebab-to-camel';
-export { areMocksEnabled, disableMocks, enableMocks } from './mock-settings';
 export { default as objectToQueryString } from './object-to-query-string';
 export { default as omit } from './omit';
 export { default as queryStringToObject } from './query-string-to-object';

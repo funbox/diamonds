@@ -19,11 +19,6 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 ## List of helpers
 
-### [areMocksEnabled, enableMocks, disableMocks](./lib/mock-settings.js)
-
-Three functions to rule mocks settings using cookie `ci-mode=dev` 
-which is checked, set or remove for the special domain.
-
 ### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.js)
 
 Two functions: the first one disables scroll (but saving the current scrolled state),
