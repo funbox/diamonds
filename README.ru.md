@@ -20,7 +20,7 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 ## Список хэлперов
 
-### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.js)
+### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.ts)
 
 Состоит из двух функций: одна отключает скролл (с сохранением местоположения),
 а другая возвращает всё как было.
@@ -28,11 +28,11 @@ import { getUniqueId } from '@funboxteam/helpers';
 Пригождается, когда нужно, например, 
 отключить скролл при открытии сайдбара, а при закрытии включить. 
 
-### [camelToKebab](./lib/camel-to-kebab.js)
+### [camelToKebab](./lib/camel-to-kebab.ts)
 
 Переводит строку из camelCase в kebab-case.
 
-### [isInputTypeSupported](./lib/is-input-type-supported.js)
+### [isInputTypeSupported](./lib/is-input-type-supported.ts)
 
 Проверяет поддержку браузером переданного значения атрибута `type` блока `input`.
 
@@ -40,20 +40,20 @@ import { getUniqueId } from '@funboxteam/helpers';
 поддерживает ли браузер какой-то специфический тип `input`
 (в старых или мобильных браузерах, например). 
 
-### [colorize](./lib/colorize.js)
+### [colorize](./lib/colorize.ts)
 
 Возвращает переданные параметры в виде строки указанного цвета.
 
 Пригождается, когда нужно раскрасить логи в консоли.
 
-### [datauriToBlob](./lib/datauri-to-blob.js)
+### [datauriToBlob](./lib/datauri-to-blob.ts)
 
 Конвертирует DataURI строку в объект Blob. 
 
 Пригождается, когда нужно отправить на сервер изображение,
 полученное из редактора.
 
-### [debounce](./lib/debounce.js)
+### [debounce](./lib/debounce.ts)
 
 Создаёт функцию, которая вызовет колбэк только через указанное количество времени,
 прошеднее с момента последнего вызова этой функции.
@@ -61,7 +61,7 @@ import { getUniqueId } from '@funboxteam/helpers';
 Пригождается, когда нужно, например, повесить обработчик на скролл,
 который вызовется только через N мс после завершения потока событий.
 
-### [deepClone](./lib/deep-clone.js)
+### [deepClone](./lib/deep-clone.ts)
 
 Создаёт подробную копию переданного объекта. Не работает с циклическими ссылками.
 
@@ -69,11 +69,11 @@ import { getUniqueId } from '@funboxteam/helpers';
 (т. к. просто `Object.assign` не подходит, ибо создаёт только поверхностную копию, 
 и если у объекта есть вложенные объекты, они не копируются, а линкуются).
 
-### [equals](./lib/equals.js)
+### [equals](./lib/equals.ts)
 
 Производит «глубокое» сравнение двух переданных параметров.
 
-### [formatNumberString](./lib/format-number-string.js)
+### [formatNumberString](./lib/format-number-string.ts)
 
 Форматирует число (или корректную строку с числом) по правилам русской типографики.
 
@@ -85,21 +85,21 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 Пригождается, когда нужно отформатировать, например, стоимость чего-то.
 
-### [formatPhoneNumberString](./lib/format-phone-number-string.js)
+### [formatPhoneNumberString](./lib/format-phone-number-string.ts)
 
 Форматирует число (или корректную строку с числом) по маске мобильных номеров телефонов РФ.
 
-### [getBrowserScrollbarWidth](./lib/get-browser-scrollbar-width.js)
+### [getBrowserScrollbarWidth](./lib/get-browser-scrollbar-width.ts)
 
 Возвращает ширину скроллбара в браузере.
 
-### [getDisplayName](./lib/get-display-name.js)
+### [getDisplayName](./lib/get-display-name.ts)
 
 Используется при формировании свойства
 [displayName](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging)
 для HOC-компонентов.
 
-### [getImageOrientation](./lib/get-image-orientation.js)
+### [getImageOrientation](./lib/get-image-orientation.ts)
 
 Извлекает из Exif информацию об ориентации изображения.
 
@@ -127,7 +127,7 @@ getImageOrientation.call(this, image, orientation => {
 });
 ```
 
-### [getObjectPath](./lib/get-object-path.js)
+### [getObjectPath](./lib/get-object-path.ts)
 
 Возвращает свойство из объекта по указанному «пути».
 
@@ -135,18 +135,18 @@ getImageOrientation.call(this, image, orientation => {
 и не хочется писать длинные условия. 
 `getObjectPath(obj, 'key1.key2.key3')` и готово. 
 
-### [getPlural](./lib/get-plural.js)
+### [getPlural](./lib/get-plural.ts)
 
 Выбирает и возвращает правильное название единиц для переданного числа.
 
 Пригождается, когда в зависимости от числа нужно менять связанное с ним слово:
 «1 день», «2 дня», «5 дней». 
 
-### [getRandomNum](./lib/get-random-num.js)
+### [getRandomNum](./lib/get-random-num.ts)
 
 Возвращает [псевдослучайное число](https://ru.wikipedia.org/wiki/Генератор_псевдослучайных_чисел) в указанном диапазоне.
 
-### [getUniqueId](./lib/get-unique-id.js)
+### [getUniqueId](./lib/get-unique-id.ts)
 
 Возвращает строку сгенерированную по принципу «префикс-число», 
 где префикс — это значение переданного параметра (или «id»),
@@ -155,53 +155,53 @@ getImageOrientation.call(this, image, orientation => {
 Пригождается, когда нужно, например, контролам на странице выдать уникальные ID,
 чтобы связать их с лэйблами.  
 
-### [hexToRgb](./lib/hex-to-rgb.js)
+### [hexToRgb](./lib/hex-to-rgb.ts)
 
 Переводит hex-нотацию цвета в RGB-нотацию.
 
-### [isElementInViewport](./lib/is-element-in-viewport.js)
+### [isElementInViewport](./lib/is-element-in-viewport.ts)
 
 Возвращает `true`, если переданный элемент полностью 
 (или нет, в зависимости от настроек) виден во вьюпорте пользователя. 
 
-### [isEmailValid](./lib/is-email-valid.js)
+### [isEmailValid](./lib/is-email-valid.ts)
 
 Возвращает `true`, если переданная строка — валидный адрес эл. почты.
 
-### [isMobile](./lib/is-mobile.js)
+### [isMobile](./lib/is-mobile.ts)
 
 Возвращает `true`, если по UA кажется, что браузер пользователя мобильный.
 
 Пригождается, когда не нужна точная проверка (используемые внутри проверки довольно простые).
 
-### [kebabToCamel](./lib/kebab-to-camel.js)
+### [kebabToCamel](./lib/kebab-to-camel.ts)
 
 Переводит строку из kebab-case в camelCase.
 
-### [queryStringToObject](./lib/query-string-to-object.js)
+### [queryStringToObject](./lib/query-string-to-object.ts)
 
 Превращает query-строку в объект.
 
-### [objectToQueryString](./lib/object-to-query-string.js)
+### [objectToQueryString](./lib/object-to-query-string.ts)
 
 Превращает объект, в котором значения ключей представлены примитивными типами,
 в query-строку.
 
-### [omit](./lib/omit.js)
+### [omit](./lib/omit.ts)
 
 Возвращает переданный объект, но без перечисленных ключей.
 
 Типичный пример использования в Реакте: `omit(this.props, 'mods', 'mix')`.
 
-### [rgbToHex](./lib/rgb-to-hex.js)
+### [rgbToHex](./lib/rgb-to-hex.ts)
 
 Переводит RGB-нотацию цвета в hex-нотацию.
 
-### [storage](./lib/storage.js)
+### [storage](./lib/storage.ts)
 
 Предоставляет возможность безопасного использования `localStorage`.
 
-### [throttle](./lib/throttle.js)
+### [throttle](./lib/throttle.ts)
 
 Превращает переданный колбэк в функцию,
 при вызове которой колбэк вызовется только в том случае,
