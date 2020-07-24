@@ -1,48 +1,89 @@
-# @funboxteam/helpers
+# @funboxteam/diamonds
 
-В этом репозитории хранится набор различных хелперов,
-которые когда-то пригодились нам в проектах,
+[![npm](https://img.shields.io/npm/v/@funboxteam/diamonds.svg)](https://www.npmjs.com/package/@funboxteam/diamonds)
+
+В этом репозитории хранится набор различных хелперов, которые когда-то пригодились нам в проектах,
 и возможно ещё пригодятся в будущем.
+
+Все хэлперы независимы друг от друга, а потому при импорте конкретных функций в итоговый бандл будут попадать только они, 
+а не вся библиотека.
+
+## Содержание
+
+- [Назначение](#назначение)
+- [Установка](#установка)
+- [Список хэлперов](#список-хэлперов)
+  - [disableBodyScroll, enableBodyScroll](#disablebodyscroll-enableBodyScroll)
+  - [camelToKebab](#cameltokebab)
+  - [isInputTypeSupported](#isinputtypesupported)
+  - [colorize](#colorize)
+  - [datauriToBlob](#datauritoblob)
+  - [debounce](#debounce)
+  - [deepClone](#deepclone)
+  - [equals](#equals)
+  - [formatNumberString](#formatnumberstring)
+  - [formatPhoneNumberString](#formatphonenumberstring)
+  - [getBrowserScrollbarWidth](#getbrowserscrollbarwidth)
+  - [getDisplayName](#getdisplayname)
+  - [getImageOrientation](#getimageorientation)
+  - [getObjectPath](#getobjectpath)
+  - [getPlural](#getplural)
+  - [getRandomNum](#getrandomnum)
+  - [getUniqueId](#getuniqueid)
+  - [hexToRgb](#hextorgb)
+  - [isElementInViewport](#iselementinviewport)
+  - [isEmailValid](#isemailvalid)
+  - [isMobile](#ismobile)
+  - [kebabToCamel](#kebabtocamel)
+  - [queryStringToObject](#querystringtoobject)
+  - [objectToQueryString](#objecttoquerystring)
+  - [omit](#omit)
+  - [rgbToHex](#rgbtohex)
+  - [storage](#storage)
+  - [throttle](#throttle)
+
+## Назначение
+
+Когда разработчики работают над проектами, они используют большое количество маленьких функций, которые не связаны 
+с проектом контекстуально. Обычно такие функции хранятся в папках вроде `utils` или `helpers`.
+
+Чтобы избавиться от копи-паста таких функций из проекта в проект, мы создали этот пакет.
+
+Все функции, что в нём лежат, не нацелены на то, чтобы быть абсолютно готовыми к непредвиденному использованию.
+Они делают то, что заявлено, так, как заявлено, и ничего сверх.
 
 ## Установка
 
 Добавить пакет в зависимости:
 
 ```sh
-npm install --save @funboxteam/helpers 
+npm install --save @funboxteam/diamonds 
 ```
 
 Импортировать необходимые функции:
 
 ```js
-import { getUniqueId } from '@funboxteam/helpers';
+import { getUniqueId } from '@funboxteam/diamonds';
 ```
 
 ## Список хэлперов
 
+Вообще легче просто посмотреть исходный код хэлперов, ибо они достаточно маленькие. Но если нужно описание, то вот оно.
+
 ### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.ts)
 
-Состоит из двух функций: одна отключает скролл (с сохранением местоположения),
-а другая возвращает всё как было.
+Первая функция отключает скролл на текущей страницы (с возможностью сохранения текущего местоположения),
+а вторая возвращает всё как было, восстанавливая местоположение, если оно было сохранено.
 
-Пригождается, когда нужно, например, 
-отключить скролл при открытии сайдбара, а при закрытии включить. 
+Пригождается, когда нужно, например, отключить скролл при открытии сайдбара, а при закрытии включить. 
 
 ### [camelToKebab](./lib/camel-to-kebab.ts)
 
 Переводит строку из camelCase в kebab-case.
 
-### [isInputTypeSupported](./lib/is-input-type-supported.ts)
-
-Проверяет поддержку браузером переданного значения атрибута `type` блока `input`.
-
-Пригождается, когда нужно проверить,
-поддерживает ли браузер какой-то специфический тип `input`
-(в старых или мобильных браузерах, например). 
-
 ### [colorize](./lib/colorize.ts)
 
-Возвращает переданные параметры в виде строки указанного цвета.
+Возвращает переданные параметры в виде строки с цветовыми тегами внутри.
 
 Пригождается, когда нужно раскрасить логи в консоли.
 
@@ -50,12 +91,11 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 Конвертирует DataURI строку в объект Blob. 
 
-Пригождается, когда нужно отправить на сервер изображение,
-полученное из редактора.
+Пригождается, когда нужно отправить на сервер изображение, полученное из редактора на Canvas.
 
 ### [debounce](./lib/debounce.ts)
 
-Создаёт функцию, которая вызовет колбэк только через указанное количество времени,
+Возвращает функцию, которая вызовет колбэк только через указанное количество времени,
 прошеднее с момента последнего вызова этой функции.
 
 Пригождается, когда нужно, например, повесить обработчик на скролл,
@@ -63,11 +103,10 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 ### [deepClone](./lib/deep-clone.ts)
 
-Создаёт подробную копию переданного объекта. Не работает с циклическими ссылками.
+Возвращает подробную копию переданного объекта. Не работает с циклическими ссылками.
 
-Пригождается, когда нужно «глубоко» скопировать объект
-(т. к. просто `Object.assign` не подходит, ибо создаёт только поверхностную копию, 
-и если у объекта есть вложенные объекты, они не копируются, а линкуются).
+Пригождается, когда нужно «глубоко» скопировать объект, т. к. просто `Object.assign` не подходит, 
+ибо создаёт только поверхностную копию, и если у объекта есть вложенные объекты, они не копируются, а линкуются.
 
 ### [equals](./lib/equals.ts)
 
@@ -76,12 +115,6 @@ import { getUniqueId } from '@funboxteam/helpers';
 ### [formatNumberString](./lib/format-number-string.ts)
 
 Форматирует число (или корректную строку с числом) по правилам русской типографики.
-
-По умолчанию:
-  
-  - разделитель разрядов (`space`): ` ` (пробел),
-  - десятичный разделитель (`delimiter`): ',' (запятая),
-  - минус (`minus`): '−' (минус, U+2212).
 
 Пригождается, когда нужно отформатировать, например, стоимость чего-то.
 
@@ -97,11 +130,11 @@ import { getUniqueId } from '@funboxteam/helpers';
 
 Используется при формировании свойства
 [displayName](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging)
-для HOC-компонентов.
+для HOC-компонентов в Реакте.
 
 ### [getImageOrientation](./lib/get-image-orientation.ts)
 
-Извлекает из Exif информацию об ориентации изображения.
+Извлекает из EXIF информацию об ориентации изображения.
 
 Пример использования:
 
@@ -157,16 +190,23 @@ getImageOrientation.call(this, image, orientation => {
 
 ### [hexToRgb](./lib/hex-to-rgb.ts)
 
-Переводит hex-нотацию цвета в RGB-нотацию.
+Переводит строку с HEX-нотацией цвета в объект с RGB-нотацией.
 
 ### [isElementInViewport](./lib/is-element-in-viewport.ts)
 
 Возвращает `true`, если переданный элемент полностью 
-(или нет, в зависимости от настроек) виден во вьюпорте пользователя. 
+(или нет, в зависимости от переданного параметра) виден во вьюпорте пользователя. 
 
 ### [isEmailValid](./lib/is-email-valid.ts)
 
 Возвращает `true`, если переданная строка — валидный адрес эл. почты.
+
+### [isInputTypeSupported](./lib/is-input-type-supported.ts)
+
+Проверяет поддержку браузером переданного значения атрибута `type` блока `input`.
+
+Пригождается, когда нужно проверить, поддерживает ли браузер какой-то специфический тип `input`
+(в старых или мобильных браузерах, например). 
 
 ### [isMobile](./lib/is-mobile.ts)
 
@@ -195,7 +235,7 @@ getImageOrientation.call(this, image, orientation => {
 
 ### [rgbToHex](./lib/rgb-to-hex.ts)
 
-Переводит RGB-нотацию цвета в hex-нотацию.
+Переводит объект с RGB-нотацией цвета в строку с HEX-нотацией.
 
 ### [storage](./lib/storage.ts)
 
@@ -203,9 +243,10 @@ getImageOrientation.call(this, image, orientation => {
 
 ### [throttle](./lib/throttle.ts)
 
-Превращает переданный колбэк в функцию,
-при вызове которой колбэк вызовется только в том случае,
+Превращает переданный колбэк в функцию, при вызове которой колбэк вызовется только в том случае,
 если прошло указанное количество времени.
 
 Пригождается, когда нужно, например, отправлять данные при скролле,
-но делать это не мгновенно, а каждую секунду, чтобы не плодить кучу запросов. 
+но делать это не мгновенно, а каждые N мс, чтобы не плодить кучу запросов. 
+
+[![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)

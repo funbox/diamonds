@@ -1,66 +1,111 @@
-# @funboxteam/helpers
+# @funboxteam/diamonds
 
-This is a set of helpers that we use in the current projects 
-and will use in the future ones. 
+[![npm](https://img.shields.io/npm/v/@funboxteam/diamonds.svg)](https://www.npmjs.com/package/@funboxteam/diamonds)
+
+This is a set of helpers that we use in the current projects and will probably use in the future ones. 
+
+All helpers are independent from each other, which means that your project's bundle won't be bloated by useless code. 
+
+[По-русски](./README.ru.md)
+
+## Contents
+
+- [Rationale](#rationale)
+- [Installation](#installation)
+- [List of helpers](#list-of-helpers)
+  - [disableBodyScroll, enableBodyScroll](#disablebodyscroll-enableBodyScroll)
+  - [camelToKebab](#cameltokebab)
+  - [isInputTypeSupported](#isinputtypesupported)
+  - [colorize](#colorize)
+  - [datauriToBlob](#datauritoblob)
+  - [debounce](#debounce)
+  - [deepClone](#deepclone)
+  - [equals](#equals)
+  - [formatNumberString](#formatnumberstring)
+  - [formatPhoneNumberString](#formatphonenumberstring)
+  - [getBrowserScrollbarWidth](#getbrowserscrollbarwidth)
+  - [getDisplayName](#getdisplayname)
+  - [getImageOrientation](#getimageorientation)
+  - [getObjectPath](#getobjectpath)
+  - [getPlural](#getplural)
+  - [getRandomNum](#getrandomnum)
+  - [getUniqueId](#getuniqueid)
+  - [hexToRgb](#hextorgb)
+  - [isElementInViewport](#iselementinviewport)
+  - [isEmailValid](#isemailvalid)
+  - [isMobile](#ismobile)
+  - [kebabToCamel](#kebabtocamel)
+  - [queryStringToObject](#querystringtoobject)
+  - [objectToQueryString](#objecttoquerystring)
+  - [omit](#omit)
+  - [rgbToHex](#rgbtohex)
+  - [storage](#storage)
+  - [throttle](#throttle)
+
+## Rationale
+
+When developers create projects they use a lot of small functions that are not connected to the project itself.
+Usually such functions are stored in folders like `utils` or `helpers`. 
+
+To prevent copy-pasting between a huge amount of projects we've created this package.
+
+These functions are not aimed to be absolutely safe to unexpected usage. 
+They do exactly what they say they do, and nothing else.  
 
 ## Installation
 
 Add the package to deps:
 
 ```sh
-npm install --save @funboxteam/helpers 
+npm install --save @funboxteam/diamonds 
 ```
 
 Import functions:
 
 ```js
-import { getUniqueId } from '@funboxteam/helpers';
+import { getUniqueId } from '@funboxteam/diamonds';
 ```
 
 ## List of helpers
 
+It's easier to check every helper's source code rather than reading docs. But if you want some, here they are. 
+
 ### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.ts)
 
-Two functions: the first one disables scroll (but saving the current scrolled state),
-the second one enables the scroll and restores its state.
+The first function disables scroll on the current page with the possibility to save the current scrolled position,
+the second one enables the scroll and restores its position if it was saved.
 
-It's useful when one wants to disable scroll while opening sidebar and enable it while closing. 
+It's useful when you want to disable scroll e.g. while opening sidebar and enable it while closing. 
 
 ### [camelToKebab](./lib/camel-to-kebab.ts)
 
 Converts camelCase string into kebab-case.
 
-### [isInputTypeSupported](./lib/is-input-type-supported.ts)
-
-Checks browser support of the passed `type` attribute value for `input` tag.
-
-It's useful when one is dealing with old browsers.
-
 ### [colorize](./lib/colorize.ts)
 
-Returns passed params as a colored string.
+Returns passed params as string with color tags inside.
 
-It's useful when one wants to colorize logs in terminal.
+It's useful when you want to colorize logs in terminal.
 
 ### [datauriToBlob](./lib/datauri-to-blob.ts)
 
 Converts DataURI string into Blob instance.
 
-It's useful when one needs to send an image from online editor to the server.
+It's useful when you need to send an image from online editor to the server.
 
 ### [debounce](./lib/debounce.ts)
 
-Returns a debounced function that delays invoking callback until after passed seconds have elapsed since the last time 
+Returns a debounced function that delays invoking callback until passed seconds have elapsed since the last time 
 the debounced function was invoked. 
 
-It's useful when one have to handle scroll events but want to fire callback after the events flow finishes.
+It's useful when you have to handle flow of events but want to fire callback after the flow finishes.
 
 ### [deepClone](./lib/deep-clone.ts)
 
 Returns deep clone of the passed object. Does not work with circular links.
 
-It's useful when one needs to deeply cone an object. `Object.assign` does not work in this case,
-because it creates shadow copy.
+It's useful when you need to deeply clone an object. `Object.assign` does not work in this case,
+because it creates a shadow copy.
 
 ### [equals](./lib/equals.ts)
 
@@ -68,19 +113,13 @@ Deeply compares passed params.
 
 ### [formatNumberString](./lib/format-number-string.ts)
 
-Formats a number (or a string with number inside) using the passed format.
+Formats a number (or a string with a number inside) using the passed format.
 
-By default:
-  
-  - digit group separator (`space`): ` ` (plain space),
-  - decimal separator (`delimiter`): ',' (comma),
-  - minus sign (`minus`): '−' (minus, U+2212).
-  
-It's useful when one needs to format, let's say, the cost of something.
+It's useful when you need to format, let's say, the cost of something.
 
 ### [formatPhoneNumberString](./lib/format-phone-number-string.ts)
 
-Formats a number (or a string with number inside) by mask of Russian MSISDNs. 
+Formats a number (or a string with a number inside) by the mask of Russian MSISDNs. 
 
 ### [getBrowserScrollbarWidth](./lib/get-browser-scrollbar-width.ts)
 
@@ -89,7 +128,7 @@ Returns browser scrollbar width.
 ### [getDisplayName](./lib/get-display-name.ts)
 
 Returns [displayName](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging)
-for HOC.
+for React HOC.
 
 ### [getImageOrientation](./lib/get-image-orientation.ts)
 
@@ -123,7 +162,7 @@ getImageOrientation.call(this, image, orientation => {
 
 Gets the value at path of object.
 
-It's useful when one have to work with highly nested objects and don't want to write long conditionals.
+It's useful when you have to work with highly nested objects and don't want to write long conditionals.
 `getObjectPath(obj, 'key1.key2.key3')` and the work is done. 
 
 ### [getPlural](./lib/get-plural.ts)
@@ -141,12 +180,11 @@ Returns [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_
 Returns a string generated by the pattern `prefix-number` where prefix is the passed param,
 but number is unique.
 
-It's useful when you need a unique string that can be namespaced. E.g. for generating unique IDs 
-of the DOM elements for creating relations between them and their labels.
+It's useful when you need a unique string that can be namespaced. E.g. for generating unique IDs for DOM elements.
 
 ### [hexToRgb](./lib/hex-to-rgb.ts)
 
-Converts HEX color to RGB.
+Converts HEX color string to RGB object.
 
 ### [isElementInViewport](./lib/is-element-in-viewport.ts)
 
@@ -157,11 +195,17 @@ Returns `true` when the passed DOM node is visible in the viewport
 
 Returns `true` when the passed string is a valid email.
 
+### [isInputTypeSupported](./lib/is-input-type-supported.ts)
+
+Checks browser support of the passed `type` attribute value for `input` tag.
+
+It's useful when you deal with old browsers.
+
 ### [isMobile](./lib/is-mobile.ts)
 
 Returns `true` when UA is similar to mobile.
 
-It is useful when one doesn't need a precise check (the checks that are used inside the script are quite simple).
+It is useful when you don't need a precise check (the checks that are used inside the script are quite simple).
 
 ### [kebabToCamel](./lib/kebab-to-camel.ts)
 
@@ -183,7 +227,7 @@ E.g. in React: `omit(this.props, 'mods', 'mix')`.
 
 ### [rgbToHex](./lib/rgb-to-hex.ts)
 
-Transforms RBG color into HEX.
+Transforms RBG color object into HEX string.
 
 ### [storage](./lib/storage.ts)
 
@@ -191,6 +235,8 @@ Makes it possible to use `localStorage` safely.
 
 ### [throttle](./lib/throttle.ts)
 
-Transforms the passed callback into the functions that delays callback firing.
+Transforms the passed callback into the function that delays callback firing.
 
-It's useful when one wants to react on scroll but only when user makes a pause between scrolling. 
+It's useful when you want to react on some events but no than once an N ms. 
+
+[![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)
