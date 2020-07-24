@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.0.0 (24.07.2020)
+
+The package was renamed to `@funboxteam/diamonds` and published on Github.
+
+
 ## 5.0.0 (23.07.2020)
 
 Removed `mock-settings.ts`.

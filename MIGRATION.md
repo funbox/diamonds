@@ -1,5 +1,10 @@
 # Migrations
 
+## 5.0.0 → 6.0.0
+
+Use `@funboxteam/diamonds` instead of `@funboxteam/helpers`.
+
+
 ## 4.0.0 → 5.0.0
 
 `areMocksEnabled`, `enableMocks`, and `disableMocks` were removed from the package. So they will be replaced 
