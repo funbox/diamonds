@@ -15,6 +15,7 @@
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "author": "Igor Adamenko <mail@igoradamenko.com> (https://igoradamenko.com)",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/funbox/diamonds"
