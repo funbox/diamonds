@@ -1,5 +1,9 @@
 # @funboxteam/diamonds
 
+<img align="right" width="192" height="192"
+     alt="Set of diamonds"
+     src="./logo.png">
+
 [![npm](https://img.shields.io/npm/v/@funboxteam/diamonds.svg)](https://www.npmjs.com/package/@funboxteam/diamonds)
 
 This is a set of helpers that we use in the current projects and will probably use in the future ones. 
@@ -41,6 +45,7 @@ All helpers are independent from each other, which means that your project's bun
   - [rgbToHex](#rgbtohex)
   - [storage](#storage)
   - [throttle](#throttle)
+- [Credits](#credits)
 
 ## Rationale
 
@@ -238,5 +243,9 @@ Makes it possible to use `localStorage` safely.
 Transforms the passed callback into the function that delays callback firing.
 
 It's useful when you want to react on some events but no than once an N ms. 
+
+## Credits
+
+Cute picture for the project was made by [Igor Garybaldi](http://pandabanda.com/).
 
 [![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)

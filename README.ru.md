@@ -1,5 +1,9 @@
 # @funboxteam/diamonds
 
+<img align="right" width="192" height="192"
+     alt="Set of diamonds"
+     src="./logo.png">
+
 [![npm](https://img.shields.io/npm/v/@funboxteam/diamonds.svg)](https://www.npmjs.com/package/@funboxteam/diamonds)
 
 В этом репозитории хранится набор различных хелперов, которые когда-то пригодились нам в проектах,
@@ -41,6 +45,7 @@
   - [rgbToHex](#rgbtohex)
   - [storage](#storage)
   - [throttle](#throttle)
+- [Благодарности](#благодарности)
 
 ## Назначение
 
@@ -248,5 +253,9 @@ getImageOrientation.call(this, image, orientation => {
 
 Пригождается, когда нужно, например, отправлять данные при скролле,
 но делать это не мгновенно, а каждые N мс, чтобы не плодить кучу запросов. 
+
+## Благодарности
+
+Клёвую картинку для репозитория нарисовал [Игорь Гарибальди](http://pandabanda.com/).
 
 [![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)
