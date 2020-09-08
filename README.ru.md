@@ -102,7 +102,7 @@ import { getUniqueId } from '@funboxteam/diamonds';
 ### [debounce](./lib/debounce.ts)
 
 Возвращает функцию, которая вызовет колбэк только через указанное количество времени,
-прошеднее с момента последнего вызова этой функции.
+прошедшее с момента последнего вызова этой функции.
 
 Пригождается, когда нужно, например, повесить обработчик на скролл,
 который вызовется только через N мс после завершения потока событий.
@@ -149,7 +149,7 @@ import { getUniqueId } from '@funboxteam/diamonds';
 
 Пример использования:
 
-```javascript
+```js
 getImageOrientation.call(this, image, orientation => {
   let rotate;
 
