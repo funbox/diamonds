@@ -25,6 +25,7 @@ All helpers are independent from each other, which means that your project's bun
   - [debounce](#debounce)
   - [deepClone](#deepclone)
   - [equals](#equals)
+  - [findLast](#findLast)
   - [formatNumberString](#formatnumberstring)
   - [formatPhoneNumberString](#formatphonenumberstring)
   - [getBrowserScrollbarWidth](#getbrowserscrollbarwidth)
@@ -115,6 +116,11 @@ because it creates a shadow copy.
 ### [equals](./lib/equals.ts)
 
 Deeply compares passed params.
+
+### [findLast](./lib/find-last.ts)
+
+Returns the value of the last element in the provided array that satisfies the provided testing function.
+Otherwise `undefined`.
 
 ### [formatNumberString](./lib/format-number-string.ts)
 

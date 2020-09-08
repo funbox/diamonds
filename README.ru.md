@@ -25,6 +25,7 @@
   - [debounce](#debounce)
   - [deepClone](#deepclone)
   - [equals](#equals)
+  - [findLast](#findLast)
   - [formatNumberString](#formatnumberstring)
   - [formatPhoneNumberString](#formatphonenumberstring)
   - [getBrowserScrollbarWidth](#getbrowserscrollbarwidth)
@@ -116,6 +117,11 @@ import { getUniqueId } from '@funboxteam/diamonds';
 ### [equals](./lib/equals.ts)
 
 Производит «глубокое» сравнение двух переданных параметров.
+
+### [findLast](./lib/find-last.ts)
+
+Возвращает значение последнего найденного в массиве элемента, которое удовлетворяет условию переданному в колбэке.
+Или `undefined`, если такого элемента нет.
 
 ### [formatNumberString](./lib/format-number-string.ts)
 
