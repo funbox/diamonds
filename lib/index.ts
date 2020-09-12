@@ -5,6 +5,7 @@ export { default as datauriToBlob } from './datauri-to-blob';
 export { default as debounce } from './debounce';
 export { default as deepClone } from './deep-clone';
 export { default as equals } from './equals';
+export { default as findLast } from './find-last';
 export { default as formatNumberString } from './format-number-string';
 export { default as formatPhoneNumberString } from './format-phone-number-string';
 export { default as getBrowserScrollbarWidth } from './get-browser-scrollbar-width';

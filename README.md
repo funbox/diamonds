@@ -8,7 +8,7 @@
 
 This is a set of helpers that we use in the current projects and will probably use in the future ones. 
 
-All helpers are independent from each other, which means that your project's bundle won't be bloated by useless code. 
+All helpers are independent of each other, which means that your project's bundle won't be bloated by useless code. 
 
 [По-русски](./README.ru.md)
 
@@ -25,6 +25,7 @@ All helpers are independent from each other, which means that your project's bun
   - [debounce](#debounce)
   - [deepClone](#deepclone)
   - [equals](#equals)
+  - [findLast](#findLast)
   - [formatNumberString](#formatnumberstring)
   - [formatPhoneNumberString](#formatphonenumberstring)
   - [getBrowserScrollbarWidth](#getbrowserscrollbarwidth)
@@ -116,6 +117,11 @@ because it creates a shadow copy.
 
 Deeply compares passed params.
 
+### [findLast](./lib/find-last.ts)
+
+Returns the value of the last element in the provided array that satisfies the provided testing function.
+Otherwise `undefined`.
+
 ### [formatNumberString](./lib/format-number-string.ts)
 
 Formats a number (or a string with a number inside) using the passed format.
@@ -141,7 +147,7 @@ Extracts orientation from the passed images EXIF.
 
 Example:
 
-```javascript
+```js
 getImageOrientation.call(this, image, orientation => {
   let rotate;
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.1.0 (12.09.2020)
+
+Added [findLast](./lib/findLast.ts).
+
+
 ## 6.0.0 (24.07.2020)
 
 The package was renamed to `@funboxteam/diamonds` and published on Github.
