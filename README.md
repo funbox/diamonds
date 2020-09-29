@@ -17,6 +17,7 @@ All helpers are independent of each other, which means that your project's bundl
 - [Rationale](#rationale)
 - [Installation](#installation)
 - [List of helpers](#list-of-helpers)
+  - [base64ToUint8Array](#base64touint8array)
   - [disableBodyScroll, enableBodyScroll](#disablebodyscroll-enableBodyScroll)
   - [camelToKebab](#cameltokebab)
   - [isInputTypeSupported](#isinputtypesupported)
@@ -75,6 +76,10 @@ import { getUniqueId } from '@funboxteam/diamonds';
 ## List of helpers
 
 It's easier to check every helper's source code rather than reading docs. But if you want some, here they are. 
+
+### [base64ToUint8Array](./lib/base64-to-uint8array.ts)
+
+Converts Base64 string to a [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
 
 ### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.ts)
 
