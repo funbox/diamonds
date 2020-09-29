@@ -17,6 +17,7 @@
 - [Назначение](#назначение)
 - [Установка](#установка)
 - [Список хэлперов](#список-хэлперов)
+  - [base64ToUint8Array](#base64touint8array)
   - [disableBodyScroll, enableBodyScroll](#disablebodyscroll-enableBodyScroll)
   - [camelToKebab](#cameltokebab)
   - [isInputTypeSupported](#isinputtypesupported)
@@ -75,6 +76,10 @@ import { getUniqueId } from '@funboxteam/diamonds';
 ## Список хэлперов
 
 Вообще легче просто посмотреть исходный код хэлперов, ибо они достаточно маленькие. Но если нужно описание, то вот оно.
+
+### [base64ToUint8Array](./lib/base64-to-uint8array.ts)
+
+Преобразует Base64-строку в [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
 
 ### [disableBodyScroll, enableBodyScroll](./lib/body-scroll.ts)
 

@@ -1,8 +1,13 @@
 # Changelog
 
+## 6.2.0 (29.09.2020)
+
+Added [base64ToUint8Array](./lib/base64-to-uint8array.ts).
+
+
 ## 6.1.0 (12.09.2020)
 
-Added [findLast](./lib/findLast.ts).
+Added [findLast](./lib/find-last.ts).
 
 
 ## 6.0.0 (24.07.2020)
