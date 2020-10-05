@@ -1,5 +1,9 @@
 # Changelog
 
+## 6.2.1 (05.10.2020)
+
+Removed tslib from dependencies.
+
 ## 6.2.0 (29.09.2020)
 
 Added [base64ToUint8Array](./lib/base64-to-uint8array.ts).

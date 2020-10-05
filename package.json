@@ -1,6 +1,6 @@
 {
   "name": "@funboxteam/diamonds",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "description": "A shiny pile of typed JS helpers for everyday use",
   "scripts": {
     "lint": "eslint --cache -c .eslintrc.js --ext .ts lib",
@@ -24,9 +24,6 @@
     "dist/",
     "MIGRATION.md"
   ],
-  "dependencies": {
-    "tslib": "2.0.0"
-  },
   "devDependencies": {
     "@funboxteam/eslint-config": "5.0.0",
     "@types/node": "14.0.4",
