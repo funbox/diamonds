@@ -24,9 +24,6 @@
     "dist/",
     "MIGRATION.md"
   ],
-  "dependencies": {
-    "tslib": "2.0.0"
-  },
   "devDependencies": {
     "@funboxteam/eslint-config": "5.0.0",
     "@types/node": "14.0.4",
