@@ -1,12 +1,19 @@
 # Changelog
 
+## 6.3.1 (09.10.2020)
+
+Fixed negative numbers handle in [getPlural](./lib/get-plural.ts).
+
+
 ## 6.3.0 (08.10.2020)
 
-Add `dim` and `reset` colors to [colorize](./lib/colorize.ts).
+Added `dim` and `reset` colors to [colorize](./lib/colorize.ts).
+
 
 ## 6.2.1 (05.10.2020)
 
 Removed tslib from dependencies.
+
 
 ## 6.2.0 (29.09.2020)
 
