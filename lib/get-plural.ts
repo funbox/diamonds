@@ -1,4 +1,6 @@
-export default (n: number, one: string, few: string, many: string): string => {
+export default (num: number, one: string, few: string, many: string): string => {
+  const n = Math.abs(num);
+
   if (n % 10 === 1 && n % 100 !== 11) {
     return one;
   }
