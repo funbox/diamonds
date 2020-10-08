@@ -1,5 +1,6 @@
-type colors = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' |
-  'bgBlack' | 'bgRed' | 'bgGreen' | 'bgYellow' | 'bgBlue' | 'bgMagenta' | 'bgCyan' | 'bgWhite';
+type colors = 'reset' | 'dim' | 'black' | 'red' | 'green' | 'yellow' | 'blue' |
+  'magenta' | 'cyan' | 'white' | 'bgBlack' | 'bgRed' | 'bgGreen' | 'bgYellow' |
+  'bgBlue' | 'bgMagenta' | 'bgCyan' | 'bgWhite';
 
 
 // example: console.log(colorize('foo', 'bar').red);
@@ -7,6 +8,8 @@ export default (...args: string[]): Record<colors, string> => {
   const str = args.join(' ');
 
   return {
+    reset: `\x1b[0m${str}\x1b[0m`,
+    dim: `\x1b[2m${str}\x1b[22m`,
     black: `\x1b[30m${str}`,
     red: `\x1b[31m${str}`,
     green: `\x1b[32m${str}`,
