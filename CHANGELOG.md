@@ -1,5 +1,9 @@
 # Changelog
 
+## 6.3.0 (08.10.2020)
+
+Add `dim` and `reset` colors to [colorize](./lib/colorize.ts).
+
 ## 6.2.1 (05.10.2020)
 
 Removed tslib from dependencies.
