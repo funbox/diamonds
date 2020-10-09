@@ -44,6 +44,7 @@ All helpers are independent of each other, which means that your project's bundl
   - [queryStringToObject](#querystringtoobject)
   - [objectToQueryString](#objecttoquerystring)
   - [omit](#omit)
+  - [pick](#pick)
   - [rgbToHex](#rgbtohex)
   - [storage](#storage)
   - [throttle](#throttle)
@@ -237,9 +238,13 @@ Converts the passed object which contains primitive values into the query string
 
 ### [omit](./lib/omit.ts)
 
-Returns the passed object without the passed keys.
+Returns shallow copy of the passed object but without the passed keys.
 
 E.g. in React: `omit(this.props, 'mods', 'mix')`.
+
+### [pick](./lib/pick.ts)
+
+Returns shallow copy of the passed object but with the passed keys only.
 
 ### [rgbToHex](./lib/rgb-to-hex.ts)
 
