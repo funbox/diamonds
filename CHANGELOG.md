@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.3.2 (09.10.2020)
+
+Fixed [colorize](./lib/colorize.ts) to wrap only provided string.
+
+
 ## 6.3.1 (09.10.2020)
 
 Fixed negative numbers handle in [getPlural](./lib/get-plural.ts).
