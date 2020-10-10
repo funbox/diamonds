@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.4.0 (10.10.2020)
+
+Added [pick](./lib/pick.ts).
+
+
 ## 6.3.2 (09.10.2020)
 
 Fixed [colorize](./lib/colorize.ts) to wrap only provided string.

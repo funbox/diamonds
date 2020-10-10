@@ -44,6 +44,7 @@
   - [queryStringToObject](#querystringtoobject)
   - [objectToQueryString](#objecttoquerystring)
   - [omit](#omit)
+  - [pick](#pick)
   - [rgbToHex](#rgbtohex)
   - [storage](#storage)
   - [throttle](#throttle)
@@ -245,9 +246,14 @@ getImageOrientation.call(this, image, orientation => {
 
 ### [omit](./lib/omit.ts)
 
-Возвращает переданный объект, но без перечисленных ключей.
+Берёт передаваемый объект, и возвращает новый такой же, но без перечисленных ключей.
 
 Типичный пример использования в Реакте: `omit(this.props, 'mods', 'mix')`.
+
+### [pick](./lib/pick.ts)
+
+Берёт передаваемый объект, и возвращает новый такой же, 
+но только с перечисленными ключами, опуская все остальные.
 
 ### [rgbToHex](./lib/rgb-to-hex.ts)
 
