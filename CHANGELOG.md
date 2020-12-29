@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.4.1 (29.12.2020)
+
+Improved type declarations for [pick](./lib/pick.ts) and [omit](./lib/omit.ts).
+
+
 ## 6.4.0 (10.10.2020)
 
 Added [pick](./lib/pick.ts).
