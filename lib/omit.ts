@@ -1,11 +1,8 @@
-// The function may process objects that contains values of any type. So we allow `any` here.
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-export default (obj: Record<string, any>, ...keysToOmit: string[]): Record<string, any> => Object.keys(obj)
-  .reduce<Record<string, any>>((acc, key) => {
+export default <T extends object, K extends PropertyKey[]>(obj: T, ...keysToOmit: K): { [P in Exclude<keyof T, K[number]>]: T[P] } => Object.keys(obj)
+  .reduce((acc, key) => {
     if (keysToOmit.indexOf(key) === -1) {
-      acc[key] = obj[key];
+      acc[key as keyof T] = obj[key as keyof T];
     }
 
     return acc;
-  }, {});
+  }, {} as { [K in keyof T]: T[K] });
