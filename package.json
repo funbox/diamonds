@@ -1,6 +1,6 @@
 {
   "name": "@funboxteam/diamonds",
-  "version": "6.4.1",
+  "version": "6.5.0",
   "description": "A shiny pile of typed JS helpers for everyday use",
   "scripts": {
     "lint": "eslint --cache -c .eslintrc.js --ext .ts lib",
@@ -8,7 +8,7 @@
     "build-cjs": "tsc --outDir ./dist/cjs --module CommonJS",
     "build-esm-and-types": "tsc --outDir ./dist/esm --module ES6 --declaration true --declarationDir ./dist/types",
     "build": "npm run build-esm-and-types && npm run build-cjs",
-    "prepublishOnly": "npm run build"
+    "prepack": "npm run build"
   },
   "sideEffects": false,
   "main": "dist/cjs/index.js",
