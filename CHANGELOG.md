@@ -1,5 +1,11 @@
 # Changelog
 
+## 6.5.0 (14.01.2021)
+
+Deprecated [getObjectPath](./lib/get-object-path.ts). Please use
+[optional chaining](https://github.com/tc39/proposal-optional-chaining) instead.
+
+
 ## 6.4.1 (29.12.2020)
 
 Improved type declarations for [pick](./lib/pick.ts) and [omit](./lib/omit.ts).
