@@ -27,6 +27,7 @@ All helpers are independent of each other, which means that your project's bundl
   - [deepClone](#deepclone)
   - [equals](#equals)
   - [findLast](#findLast)
+  - [formatBytes](#formatBytes)
   - [formatNumberString](#formatnumberstring)
   - [formatPhoneNumberString](#formatphonenumberstring)
   - [getBrowserScrollbarWidth](#getbrowserscrollbarwidth)
@@ -127,6 +128,10 @@ Deeply compares passed params.
 
 Returns the value of the last element in the provided array that satisfies the provided testing function.
 Otherwise `undefined`.
+
+### [formatBytes](./lib/format-bytes.ts)
+
+Converts size in bytes to KB, MB, GB, etc.
 
 ### [formatNumberString](./lib/format-number-string.ts)
 

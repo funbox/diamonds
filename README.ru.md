@@ -27,6 +27,7 @@
   - [deepClone](#deepclone)
   - [equals](#equals)
   - [findLast](#findLast)
+  - [formatBytes](#formatBytes)
   - [formatNumberString](#formatnumberstring)
   - [formatPhoneNumberString](#formatphonenumberstring)
   - [getBrowserScrollbarWidth](#getbrowserscrollbarwidth)
@@ -128,6 +129,10 @@ import { getUniqueId } from '@funboxteam/diamonds';
 
 Возвращает значение последнего найденного в массиве элемента, которое удовлетворяет условию переданному в колбэке.
 Или `undefined`, если такого элемента нет.
+
+### [formatBytes](./lib/format-bytes.ts)
+
+Преобразует размер в байтах в KB, MB, GB и т. д.
 
 ### [formatNumberString](./lib/format-number-string.ts)
 
