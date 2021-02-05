@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.6.0 (05.02.2021)
+
+Added [formatBytes](./lib/format-bytes.ts).
+
+
 ## 6.5.0 (14.01.2021)
 
 Deprecated [getObjectPath](./lib/get-object-path.ts). Please use
