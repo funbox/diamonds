@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.0.0 (17.02.2021)
+
+Replaced plain space by non-breaking space in [formatPhoneNumberString](./lib/format-phone-number-string.ts).
+
+
 ## 7.0.0 (16.02.2021)
 
 Changed behavior of [enableBodyScroll](./lib/body-scroll.ts) & [disableBodyScroll](./lib/body-scroll.ts). 

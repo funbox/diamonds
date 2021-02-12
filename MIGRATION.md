@@ -1,5 +1,11 @@
 # Migrations
 
+## 7.0.0 → 8.0.0
+
+Make sure that using non-breaking space in result of [formatPhoneNumberString](./lib/format-phone-number-string.ts)
+fits well to your project.
+
+
 ## 6.6.0 → 7.0.0
 
 If your project used [enableBodyScroll](./lib/body-scroll.ts) or [disableBodyScroll](./lib/body-scroll.ts),
