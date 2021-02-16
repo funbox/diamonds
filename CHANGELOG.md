@@ -1,5 +1,12 @@
 # Changelog
 
+## 7.0.0 (16.02.2021)
+
+Changed behavior of [enableBodyScroll](./lib/body-scroll.ts) & [disableBodyScroll](./lib/body-scroll.ts). 
+
+Now they set and clear `width: 100%`, because otherwise page width may change because of `position: fixed`.
+
+
 ## 6.6.0 (05.02.2021)
 
 Added [formatBytes](./lib/format-bytes.ts).

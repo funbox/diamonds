@@ -1,5 +1,12 @@
 # Migrations
 
+## 6.6.0 → 7.0.0
+
+If your project used [enableBodyScroll](./lib/body-scroll.ts) or [disableBodyScroll](./lib/body-scroll.ts),
+make sure it works correctly now, because they set and clear `width: 100%` to `body` 
+([#12](https://github.com/funbox/diamonds/pull/12)).
+
+
 ## 5.0.0 → 6.0.0
 
 Use `@funboxteam/diamonds` instead of `@funboxteam/helpers`.
