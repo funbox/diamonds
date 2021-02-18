@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.1.0 (19.02.2021)
+
+Support arrays of primitive types in [objectToQueryString](./lib/object-to-query-string.ts).
+
+
 ## 8.0.0 (17.02.2021)
 
 Replaced plain space by non-breaking space in [formatPhoneNumberString](./lib/format-phone-number-string.ts).
