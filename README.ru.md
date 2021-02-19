@@ -246,8 +246,8 @@ getImageOrientation.call(this, image, orientation => {
 
 ### [objectToQueryString](./lib/object-to-query-string.ts)
 
-Превращает объект, в котором значения ключей представлены примитивными типами,
-в query-строку.
+Превращает объект, в котором значения ключей представлены примитивными типами или массивами
+примитивных типов, в query-строку.
 
 ### [omit](./lib/omit.ts)
 

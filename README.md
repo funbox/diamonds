@@ -239,7 +239,7 @@ Converts query-string into object.
 
 ### [objectToQueryString](./lib/object-to-query-string.ts)
 
-Converts the passed object which contains primitive values into the query string. 
+Converts the passed object which contains primitive values or arrays of primitive values into the query string. 
 
 ### [omit](./lib/omit.ts)
 
