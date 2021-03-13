@@ -7,8 +7,8 @@ export default function equals(a: any, b: any): boolean {
   if (!a || !b || (typeof a !== 'object' && typeof b !== 'object')) return a === b;
   if (a.prototype !== b.prototype) return false;
 
-  const keys = Object.keys(a);
-  if (keys.length !== Object.keys(b).length) return false;
+  const keys = Reflect.ownKeys(a);
+  if (keys.length !== Reflect.ownKeys(b).length) return false;
 
   return keys.every(k => equals(a[k], b[k]));
 }
