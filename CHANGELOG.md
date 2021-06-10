@@ -1,5 +1,16 @@
 # Changelog
 
+## 8.1.1 (10.06.2021)
+
+Fixed several security vulnerabilities:
+
+- [Use of a Broken or Risky Cryptographic Algorithm](https://github.com/advisories/GHSA-r9p9-mrjm-926w) in [elliptic](https://github.com/indutny/elliptic). Updated from 6.5.3 to 6.5.4.
+
+- [Regular Expression Denial of Service](https://github.com/advisories/GHSA-43f8-2h32-f4cj) in [hosted-git-info](https://github.com/npm/hosted-git-info). Updated from 2.8.8 to 2.8.9.
+
+- [Command Injection](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) in [lodash](https://github.com/lodash/lodash). Updated from 4.17.20 to 4.17.21.
+
+
 ## 8.1.0 (19.02.2021)
 
 Support arrays of primitive types in [objectToQueryString](./lib/object-to-query-string.ts).
