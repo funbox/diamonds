@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.2.0 (22.07.2021)
+
+Added [capitalize](./lib/capitalize.ts).
+
+
 ## 8.1.1 (10.06.2021)
 
 Fixed several security vulnerabilities:

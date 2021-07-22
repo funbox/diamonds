@@ -1,6 +1,7 @@
 export { default as base64ToUint8Array } from './base64-to-uint8array';
 export { enableBodyScroll, disableBodyScroll } from './body-scroll';
 export { default as camelToKebab } from './camel-to-kebab';
+export { default as capitalize } from './capitalize';
 export { default as colorize } from './colorize';
 export { default as datauriToBlob } from './datauri-to-blob';
 export { default as debounce } from './debounce';
