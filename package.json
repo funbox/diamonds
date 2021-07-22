@@ -1,6 +1,6 @@
 {
   "name": "@funboxteam/diamonds",
-  "version": "8.1.1",
+  "version": "8.2.0",
   "description": "A shiny pile of typed JS helpers for everyday use",
   "scripts": {
     "lint": "eslint --cache -c .eslintrc.js --ext .ts lib",
