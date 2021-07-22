@@ -94,6 +94,10 @@ It's useful when you want to disable scroll e.g. while opening sidebar and enabl
 
 Converts camelCase string into kebab-case.
 
+### [capitalize](./lib/capitalize.ts)
+
+Change the passed strings's first letter case to upper.
+
 ### [colorize](./lib/colorize.ts)
 
 Returns passed params as string with color tags inside.

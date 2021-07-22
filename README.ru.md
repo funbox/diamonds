@@ -94,6 +94,10 @@ import { getUniqueId } from '@funboxteam/diamonds';
 
 Переводит строку из camelCase в kebab-case.
 
+### [capitalize](./lib/capitalize.ts)
+
+Приводит первый символ строки к верхнему регистру.
+
 ### [colorize](./lib/colorize.ts)
 
 Возвращает переданные параметры в виде строки с цветовыми тегами внутри.
