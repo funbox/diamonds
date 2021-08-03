@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.2.1 (03.08.2021)
+
+Fixed [pick](./lib/pick.ts) export.
+
+
 ## 8.2.0 (22.07.2021)
 
 Added [capitalize](./lib/capitalize.ts).
