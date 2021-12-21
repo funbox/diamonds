@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.3.0 (21.12.2021)
+
+Added `bold` mode to [colorize](./lib/colorize.ts).
+
+
 ## 8.2.1 (03.08.2021)
 
 Fixed [pick](./lib/pick.ts) export.

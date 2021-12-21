@@ -1,4 +1,4 @@
-type colors = 'reset' | 'dim' | 'black' | 'red' | 'green' | 'yellow' | 'blue' |
+type colors = 'reset' | 'bold' | 'dim' | 'black' | 'red' | 'green' | 'yellow' | 'blue' |
   'magenta' | 'cyan' | 'white' | 'bgBlack' | 'bgRed' | 'bgGreen' | 'bgYellow' |
   'bgBlue' | 'bgMagenta' | 'bgCyan' | 'bgWhite';
 
@@ -9,6 +9,7 @@ export default (...args: string[]): Record<colors, string> => {
 
   return {
     reset: `\x1b[0m${str}\x1b[0m`,
+    bold: `\x1b[1m${str}\x1b[22m`,
     dim: `\x1b[2m${str}\x1b[22m`,
     black: `\x1b[30m${str}\x1b[39m`,
     red: `\x1b[31m${str}\x1b[39m`,
