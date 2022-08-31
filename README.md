@@ -20,7 +20,6 @@ All helpers are independent of each other, which means that your project's bundl
   - [base64ToUint8Array](#base64touint8array)
   - [disableBodyScroll, enableBodyScroll](#disablebodyscroll-enableBodyScroll)
   - [camelToKebab](#cameltokebab)
-  - [isInputTypeSupported](#isinputtypesupported)
   - [colorize](#colorize)
   - [datauriToBlob](#datauritoblob)
   - [debounce](#debounce)
@@ -40,12 +39,13 @@ All helpers are independent of each other, which means that your project's bundl
   - [hexToRgb](#hextorgb)
   - [isElementInViewport](#iselementinviewport)
   - [isEmailValid](#isemailvalid)
+  - [isInputTypeSupported](#isinputtypesupported)
   - [isMobile](#ismobile)
   - [kebabToCamel](#kebabtocamel)
-  - [queryStringToObject](#querystringtoobject)
   - [objectToQueryString](#objecttoquerystring)
   - [omit](#omit)
   - [pick](#pick)
+  - [queryStringToObject](#querystringtoobject)
   - [rgbToHex](#rgbtohex)
   - [storage](#storage)
   - [throttle](#throttle)
@@ -103,6 +103,10 @@ Change the passed strings's first letter case to upper.
 Returns passed params as string with color tags inside.
 
 It's useful when you want to colorize logs in terminal.
+
+### [cookieStringToObject](./lib/cookie-string-to-object.ts)
+
+Converts cookie string (usually, the one you get from `document.cookie`) into an object.
 
 ### [datauriToBlob](./lib/datauri-to-blob.ts)
 
@@ -237,10 +241,6 @@ It is useful when you don't need a precise check (the checks that are used insid
 
 Converts kebab-case string into camelCase.
 
-### [queryStringToObject](./lib/query-string-to-object.ts)
-
-Converts query-string into object.
-
 ### [objectToQueryString](./lib/object-to-query-string.ts)
 
 Converts the passed object which contains primitive values or arrays of primitive values into the query string. 
@@ -254,6 +254,10 @@ E.g. in React: `omit(this.props, 'mods', 'mix')`.
 ### [pick](./lib/pick.ts)
 
 Returns shallow copy of the passed object but with the passed keys only.
+
+### [queryStringToObject](./lib/query-string-to-object.ts)
+
+Converts query-string into object.
 
 ### [rgbToHex](./lib/rgb-to-hex.ts)
 

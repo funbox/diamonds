@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.4.0 (31.08.2022)
+
+Added [cookieStringToObject](./lib/cookie-string-to-object.ts).
+
+
 ## 8.3.0 (21.12.2021)
 
 Added `bold` mode to [colorize](./lib/colorize.ts).
