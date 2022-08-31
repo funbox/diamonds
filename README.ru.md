@@ -20,7 +20,6 @@
   - [base64ToUint8Array](#base64touint8array)
   - [disableBodyScroll, enableBodyScroll](#disablebodyscroll-enableBodyScroll)
   - [camelToKebab](#cameltokebab)
-  - [isInputTypeSupported](#isinputtypesupported)
   - [colorize](#colorize)
   - [cookieStringToObject](#cookiestringtoobject)
   - [datauriToBlob](#datauritoblob)
@@ -41,12 +40,13 @@
   - [hexToRgb](#hextorgb)
   - [isElementInViewport](#iselementinviewport)
   - [isEmailValid](#isemailvalid)
+  - [isInputTypeSupported](#isinputtypesupported)
   - [isMobile](#ismobile)
   - [kebabToCamel](#kebabtocamel)
-  - [queryStringToObject](#querystringtoobject)
   - [objectToQueryString](#objecttoquerystring)
   - [omit](#omit)
   - [pick](#pick)
+  - [queryStringToObject](#querystringtoobject)
   - [rgbToHex](#rgbtohex)
   - [storage](#storage)
   - [throttle](#throttle)
@@ -249,10 +249,6 @@ getImageOrientation.call(this, image, orientation => {
 
 Переводит строку из kebab-case в camelCase.
 
-### [queryStringToObject](./lib/query-string-to-object.ts)
-
-Превращает query-строку в объект.
-
 ### [objectToQueryString](./lib/object-to-query-string.ts)
 
 Превращает объект, в котором значения ключей представлены примитивными типами или массивами
@@ -268,6 +264,10 @@ getImageOrientation.call(this, image, orientation => {
 
 Берёт передаваемый объект, и возвращает новый такой же, 
 но только с перечисленными ключами, опуская все остальные.
+
+### [queryStringToObject](./lib/query-string-to-object.ts)
+
+Превращает query-строку в объект.
 
 ### [rgbToHex](./lib/rgb-to-hex.ts)
 
