@@ -104,6 +104,10 @@ Returns passed params as string with color tags inside.
 
 It's useful when you want to colorize logs in terminal.
 
+### [cookieStringToObject](./lib/cookie-string-to-object.ts)
+
+Converts cookie string (usually, the one you get from `document.cookie`) into an object.
+
 ### [datauriToBlob](./lib/datauri-to-blob.ts)
 
 Converts DataURI string into Blob instance.

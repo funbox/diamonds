@@ -22,6 +22,7 @@
   - [camelToKebab](#cameltokebab)
   - [isInputTypeSupported](#isinputtypesupported)
   - [colorize](#colorize)
+  - [cookieStringToObject](#cookiestringtoobject)
   - [datauriToBlob](#datauritoblob)
   - [debounce](#debounce)
   - [deepClone](#deepclone)
@@ -103,6 +104,10 @@ import { getUniqueId } from '@funboxteam/diamonds';
 Возвращает переданные параметры в виде строки с цветовыми тегами внутри.
 
 Пригождается, когда нужно раскрасить логи в консоли.
+
+### [cookieStringToObject](./lib/cookie-string-to-object.ts)
+
+Превращает строку с куками (обычно, возвращаемую `document.cookie`) в объект.
 
 ### [datauriToBlob](./lib/datauri-to-blob.ts)
 
