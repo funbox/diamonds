@@ -3,6 +3,7 @@ export { enableBodyScroll, disableBodyScroll } from './body-scroll';
 export { default as camelToKebab } from './camel-to-kebab';
 export { default as capitalize } from './capitalize';
 export { default as colorize } from './colorize';
+export { default as cookieStringToObject } from './cookie-string-to-object';
 export { default as datauriToBlob } from './datauri-to-blob';
 export { default as debounce } from './debounce';
 export { default as deepClone } from './deep-clone';
