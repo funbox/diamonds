@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.4.2 (05.09.2022)
+
+Fixed [cookieStringToObject](./lib/cookie-string-to-object.ts) handling empty string passed.
+
+
 ## 8.4.1 (31.08.2022)
 
 Fixed export of [cookieStringToObject](./lib/cookie-string-to-object.ts) -_-"
