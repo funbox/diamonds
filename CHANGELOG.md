@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.5.1 (12.09.2022)
+
+Fixed export of [shuffle](./lib/shuffle.ts) -_-"
+
+
 ## 8.5.0 (12.09.2022)
 
 Added [shuffle](./lib/shuffle.ts).
