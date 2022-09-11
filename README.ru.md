@@ -48,6 +48,7 @@
   - [pick](#pick)
   - [queryStringToObject](#querystringtoobject)
   - [rgbToHex](#rgbtohex)
+  - [shuffle](#shuffle)
   - [storage](#storage)
   - [throttle](#throttle)
 - [Благодарности](#благодарности)
@@ -272,6 +273,10 @@ getImageOrientation.call(this, image, orientation => {
 ### [rgbToHex](./lib/rgb-to-hex.ts)
 
 Переводит объект с RGB-нотацией цвета в строку с HEX-нотацией.
+
+### [shuffle](./lib/shuffle.ts)
+
+Перемешивает переданный массив и возвращает его.
 
 ### [storage](./lib/storage.ts)
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## 8.5.1 (12.09.2022)
+
+Fixed export of [shuffle](./lib/shuffle.ts) -_-"
+
+
+## 8.5.0 (12.09.2022)
+
+Added [shuffle](./lib/shuffle.ts).
+
+
 ## 8.4.2 (05.09.2022)
 
 Fixed [cookieStringToObject](./lib/cookie-string-to-object.ts) handling empty string passed.
