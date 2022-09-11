@@ -49,6 +49,7 @@
   - [queryStringToObject](#querystringtoobject)
   - [rgbToHex](#rgbtohex)
   - [storage](#storage)
+  - [shuffle](#shuffle)
   - [throttle](#throttle)
 - [Благодарности](#благодарности)
 
@@ -276,6 +277,10 @@ getImageOrientation.call(this, image, orientation => {
 ### [storage](./lib/storage.ts)
 
 Предоставляет возможность безопасного использования `localStorage`.
+
+### [shuffle](./lib/shuffle.ts)
+
+Перемешивает переданный массив и возвращает его.
 
 ### [throttle](./lib/throttle.ts)
 

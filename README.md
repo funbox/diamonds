@@ -48,6 +48,7 @@ All helpers are independent of each other, which means that your project's bundl
   - [queryStringToObject](#querystringtoobject)
   - [rgbToHex](#rgbtohex)
   - [storage](#storage)
+  - [shuffle](#shuffle)
   - [throttle](#throttle)
 - [Credits](#credits)
 
@@ -266,6 +267,10 @@ Transforms RBG color object into HEX string.
 ### [storage](./lib/storage.ts)
 
 Makes it possible to use `localStorage` safely. 
+
+### [shuffle](./lib/shuffle.ts)
+
+Shuffles the passed array and returns it.
 
 ### [throttle](./lib/throttle.ts)
 
