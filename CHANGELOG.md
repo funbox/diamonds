@@ -1,5 +1,12 @@
 # Changelog
 
+## 8.5.2 (17.09.2022)
+
+Fixed [enableBodyScroll](./lib/body-scroll.ts) behavior while restoring the previously scrolled position.
+
+Now it tries to ignore `scroll-behavior: smooth` on the root node, and jumps instead of smoothly scrolling.
+
+
 ## 8.5.1 (12.09.2022)
 
 Fixed export of [shuffle](./lib/shuffle.ts) -_-"
