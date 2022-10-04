@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.6.0 (04.10.2022)
+
+Added [sleep](./lib/sleep.ts).
+
+
 ## 8.5.2 (17.09.2022)
 
 Fixed [enableBodyScroll](./lib/body-scroll.ts) behavior while restoring the previously scrolled position.

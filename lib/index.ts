@@ -31,5 +31,6 @@ export { default as pick } from './pick';
 export { default as queryStringToObject } from './query-string-to-object';
 export { default as rgbToHex } from './rgb-to-hex';
 export { default as shuffle } from './shuffle';
+export { default as sleep } from './sleep';
 export { default as storage } from './storage';
 export { default as throttle } from './throttle';
