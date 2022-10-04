@@ -49,6 +49,7 @@
   - [queryStringToObject](#querystringtoobject)
   - [rgbToHex](#rgbtohex)
   - [shuffle](#shuffle)
+  - [sleep](#sleep)
   - [storage](#storage)
   - [throttle](#throttle)
 - [Благодарности](#благодарности)
@@ -277,6 +278,10 @@ getImageOrientation.call(this, image, orientation => {
 ### [shuffle](./lib/shuffle.ts)
 
 Перемешивает переданный массив и возвращает его.
+
+### [sleep](./lib/sleep.ts)
+
+Возвращает Promise, который ждёт указанное количество миллисекунд прежде чем зарезолвиться.
 
 ### [storage](./lib/storage.ts)
 

@@ -48,6 +48,7 @@ All helpers are independent of each other, which means that your project's bundl
   - [queryStringToObject](#querystringtoobject)
   - [rgbToHex](#rgbtohex)
   - [shuffle](#shuffle)
+  - [sleep](#sleep)
   - [storage](#storage)
   - [throttle](#throttle)
 - [Credits](#credits)
@@ -267,6 +268,10 @@ Transforms RBG color object into HEX string.
 ### [shuffle](./lib/shuffle.ts)
 
 Shuffles the passed array and returns it.
+
+### [sleep](./lib/sleep.ts)
+
+Returns Promise which waits for the passed amount of ms before resolving.
 
 ### [storage](./lib/storage.ts)
 
