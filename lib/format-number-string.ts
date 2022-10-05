@@ -2,6 +2,7 @@ export default (num: number, {
   space = ' ', // just space, but nbsp; may also be passed here
   delimiter = ',',
   minus = '−',
+  formatThousands = false,
 } = {}): string => {
   /* string→number coercion after toFixed is for removing trailing zeros when they're existed: 17.00 → 17 */
   const numStr = (+num.toFixed(2)).toString();
@@ -9,7 +10,7 @@ export default (num: number, {
 
   let result = numStr;
 
-  if (uIntPart.length > 4) {
+  if (formatThousands && uIntPart.length > 3 || uIntPart.length > 4) {
     const formattedUIntPart = uIntPart
       .split('')
       .reverse()
