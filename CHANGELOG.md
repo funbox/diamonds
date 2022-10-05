@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.7.0 (05.10.2022)
+
+Added flag `formatThousands` to formatNumberString helper, which forces the helper to format numbers from 1000 to 9999.
+
+
 ## 8.6.0 (04.10.2022)
 
 Added [sleep](./lib/sleep.ts).
