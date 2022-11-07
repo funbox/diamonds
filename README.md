@@ -1,7 +1,7 @@
 # @funboxteam/diamonds
 
 <img align="right" width="192" height="192"
-     alt="Set of diamonds"
+     alt="Diamonds"
      src="./logo.png">
 
 [![npm](https://img.shields.io/npm/v/@funboxteam/diamonds.svg)](https://www.npmjs.com/package/@funboxteam/diamonds)
