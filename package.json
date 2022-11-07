@@ -9,7 +9,7 @@
     "build-esm-and-types": "tsc --outDir ./dist/esm --module ES6 --declaration true --declarationDir ./dist/types",
     "build": "npm run build-esm-and-types && npm run build-cjs",
     "prepack": "npm run build",
-    "prepare": "if [ -z \"$CI\" ]; then lawyer; fi"
+    "prepublishOnly": "if [ -z \"$CI\" ]; then lawyer; fi"
   },
   "sideEffects": false,
   "main": "dist/cjs/index.js",
