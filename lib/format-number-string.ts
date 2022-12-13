@@ -5,7 +5,7 @@ export default (num: number, {
   formatThousands = false,
 } = {}): string => {
   /* string→number coercion after toFixed is for removing trailing zeros when they're existed: 17.00 → 17 */
-  const numStr = (+num.toFixed(2)).toString();
+  const numStr = (+num).toFixed(2);
   const uIntPart = numStr.split('.')[0].replace('-', '');
 
   let result = numStr;
