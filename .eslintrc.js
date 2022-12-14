@@ -1,7 +1,6 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
   },
   extends: [
     '@funboxteam',
@@ -10,7 +9,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: 'tsconfig.json',
+    project: 'tsconfig.eslint.json',
     tsconfigRootDir: '.',
   },
   plugins: ['@typescript-eslint'],
@@ -20,6 +19,14 @@ module.exports = {
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/prefer-includes': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        ts: 'never',
+      }
+    ]
   },
   settings: {
     'import/extensions': ['.ts'],
@@ -28,7 +35,7 @@ module.exports = {
     },
     'import/resolver': {
       node: {
-        extensions:['.ts'],
+        extensions:['.ts', '.js'],
       }
     }
   },
