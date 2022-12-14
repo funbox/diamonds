@@ -56,6 +56,7 @@ jsconfig.json
 # -- Tests --
 /test-reports
 /screenshots
+/.nyc_output
 
 
 # -- Sass --
@@ -68,3 +69,4 @@ jsconfig.json
 
 # -- Project --
 /dist
+/coverage
