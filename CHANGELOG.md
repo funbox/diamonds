@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.8.0 (14.12.2022)
+
+Now `formatNumberString` & `formatPhoneNumberString` accept not only numbers, but strings.
+
+
 ## 8.7.0 (05.10.2022)
 
 Added flag `formatThousands` to formatNumberString helper, which forces the helper to format numbers from 1000 to 9999.
