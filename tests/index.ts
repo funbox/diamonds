@@ -27,6 +27,15 @@ describe('formatNumberString', () => {
     ).to.be.eql('#123!456@78');
   });
 
+  it('should accept custom formatting options partially', () => {
+    // passing space only, all the other options should be default
+    expect(
+      formatNumberString(-123456.78, {
+        space: '!',
+      }),
+    ).to.be.eql('−123!456,78');
+  });
+
   it('should round floats to second digit after the delimiter', () => {
     expect(formatNumberString(123.456)).to.be.eql('123,46');
   });
@@ -35,5 +44,14 @@ describe('formatNumberString', () => {
     expect(formatNumberString(123.000)).to.be.eql('123');
     expect(formatNumberString(123.100)).to.be.eql('123,1');
     expect(formatNumberString(123.120)).to.be.eql('123,12');
+  });
+
+  it('should accept number string', () => {
+    expect(formatNumberString('12345.67')).to.be.eql('12 345,67');
+  });
+
+  it('should throw when non valid number passed', () => {
+    const str = 'asdkjgb';
+    expect(() => formatNumberString(str)).to.throw(`Non valid number is passed: ${str}`);
   });
 });
