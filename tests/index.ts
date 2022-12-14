@@ -1,6 +1,9 @@
 import { describe, it } from 'mocha';
 
-import { formatNumberString } from '../lib';
+import {
+  formatNumberString,
+  formatPhoneNumberString,
+} from '../lib';
 
 const expect = require('chai').expect;
 
@@ -53,5 +56,15 @@ describe('formatNumberString', () => {
   it('should throw when non valid number passed', () => {
     const str = 'asdkjgb';
     expect(() => formatNumberString(str)).to.throw(`Non valid number is passed: ${str}`);
+  });
+});
+
+describe('formatPhoneNumberString', () => {
+  it('should format proper phone number', () => {
+    expect(formatPhoneNumberString(79001234567)).to.be.eql('+7\xa0900\xa0123-45-67');
+  });
+
+  it('should allow change prefix', () => {
+    expect(formatPhoneNumberString(79001234567, { prefix: '~' })).to.be.eql('~7\xa0900\xa0123-45-67');
   });
 });
