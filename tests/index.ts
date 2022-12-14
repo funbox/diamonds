@@ -67,4 +67,8 @@ describe('formatPhoneNumberString', () => {
   it('should allow change prefix', () => {
     expect(formatPhoneNumberString(79001234567, { prefix: '~' })).to.be.eql('~7\xa0900\xa0123-45-67');
   });
+
+  it('should accept string as a phone number', () => {
+    expect(formatPhoneNumberString('79001234567')).to.be.eql('+7\xa0900\xa0123-45-67');
+  });
 });
