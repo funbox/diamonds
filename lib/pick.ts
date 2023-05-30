@@ -5,4 +5,4 @@ export default <T extends object, K extends PropertyKey[]>(obj: T, ...keysToPick
     }
 
     return acc;
-  }, {} as { [K in keyof T]: T[K] });
+  }, {} as { [U in keyof T]: T[U] });
