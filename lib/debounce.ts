@@ -5,6 +5,8 @@ export default <T extends (...args: any[]) => void>(fn: T, ms = 0): T => {
   let timeoutId: ReturnType<typeof setTimeout>;
   return function debounced(this: any, ...args: any[]): void {
     clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+    timeoutId = setTimeout(() => {
+      fn.apply(this, args);
+    }, ms);
   } as T;
 };
