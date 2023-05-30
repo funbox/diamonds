@@ -4,7 +4,9 @@
 type DeepCloneSupportedType = boolean | number | bigint | string | undefined | null | Date;
 type DeepCloneSupportedComplexTypes = DeepCloneSupportedType | Record<string, DeepCloneSupportedType> | Array<DeepCloneSupportedType>;
 
-// TODO: deprecate in favor of https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+/** @deprecated since v8.9.0 - use structuredClone instead
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+ */
 function deepClone<T extends DeepCloneSupportedType>(obj: T): T;
 function deepClone<T extends Record<string, DeepCloneSupportedType>>(obj: T): T;
 function deepClone<T extends Array<DeepCloneSupportedType>>(obj: T): T;
