@@ -7,7 +7,9 @@
     "noImplicitThis": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
-    "target": "es5"
+    "target": "es5",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
   },
   "include": ["lib/*"],
   "exclude": ["node_modules", "dist"]
