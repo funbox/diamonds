@@ -1,16 +1,21 @@
-// This function is too multipurpose so we allow `any` here.
-// Also there are some constructions that are allowed by linter, but the code will be much more complex w/o them.
+// TS does not allow for circular types, but there is a trick with interfaces:
+// https://github.com/Microsoft/TypeScript/issues/3496#issuecomment-128553540
+// eslint-disable-next-line no-use-before-define
+type DeepCloneSupportedType = boolean | number | bigint | string | undefined | null | Date | DeepCloneSupportedTypeObject | DeepCloneSupportedTypeArray;
 
-type DeepCloneSupportedType = boolean | number | bigint | string | undefined | null | Date;
-type DeepCloneSupportedComplexTypes = DeepCloneSupportedType | Record<string, DeepCloneSupportedType> | Array<DeepCloneSupportedType>;
+interface DeepCloneSupportedTypeObject {
+  [x: string]: DeepCloneSupportedType;
+}
+
+// the part of the trick above
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface DeepCloneSupportedTypeArray extends Array<DeepCloneSupportedType> { }
 
 /** @deprecated since v8.9.0 - use structuredClone instead
  * @see https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
  */
 function deepClone<T extends DeepCloneSupportedType>(obj: T): T;
-function deepClone<T extends Record<string, DeepCloneSupportedType>>(obj: T): T;
-function deepClone<T extends Array<DeepCloneSupportedType>>(obj: T): T;
-function deepClone(obj: DeepCloneSupportedComplexTypes): DeepCloneSupportedComplexTypes {
+function deepClone(obj: DeepCloneSupportedType): DeepCloneSupportedType {
   if (obj == null || typeof obj !== 'object') {
     return obj;
   }
