@@ -1,6 +1,6 @@
 {
   "name": "@funboxteam/diamonds",
-  "version": "8.8.0",
+  "version": "8.9.0",
   "description": "A shiny pile of typed JS helpers for everyday use",
   "scripts": {
     "build": "npm run clean && npm run build-esm-and-types && npm run build-cjs",
