@@ -1,15 +1,15 @@
 // TS does not allow for circular types, but there is a trick with interfaces:
 // https://github.com/Microsoft/TypeScript/issues/3496#issuecomment-128553540
 // eslint-disable-next-line no-use-before-define
-type DeepCloneSupportedType = boolean | number | bigint | string | undefined | null | Date | DeepCloneSupportedTypeObject | DeepCloneSupportedTypeArray;
+type DeepCloneSupportedType = boolean | number | bigint | string | undefined | null | Date | IDeepCloneSupportedTypeObject | IDeepCloneSupportedTypeArray;
 
-interface DeepCloneSupportedTypeObject {
+interface IDeepCloneSupportedTypeObject {
   [x: string]: DeepCloneSupportedType;
 }
 
 // the part of the trick above
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface DeepCloneSupportedTypeArray extends Array<DeepCloneSupportedType> { }
+interface IDeepCloneSupportedTypeArray extends Array<DeepCloneSupportedType> { }
 
 /** @deprecated since v8.9.0 - use structuredClone instead
  * @see https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
@@ -27,7 +27,7 @@ function deepClone(obj: DeepCloneSupportedType): DeepCloneSupportedType {
   }
 
   if (obj instanceof Array) {
-    const copy: Array<DeepCloneSupportedType> = [];
+    const copy: IDeepCloneSupportedTypeArray = [];
     for (let i = 0, len = obj.length; i < len; i++) {
       copy[i] = deepClone(obj[i]);
     }
