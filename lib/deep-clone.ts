@@ -1,10 +1,24 @@
-// This function is too multipurpose so we allow `any` here.
-// Also there are some constructions that are allowed by linter, but the code will be much more complex w/o them.
-/* eslint-disable no-restricted-syntax, no-prototype-builtins, @typescript-eslint/no-explicit-any */
+// TS does not allow for circular types, but there is a trick with interfaces:
+// https://github.com/Microsoft/TypeScript/issues/3496#issuecomment-128553540
+// eslint-disable-next-line no-use-before-define
+type DeepCloneSupportedType = boolean | number | bigint | string | undefined | null | Date | IDeepCloneSupportedTypeObject | IDeepCloneSupportedTypeArray;
 
-function deepClone<T>(obj: T): T;
-function deepClone(obj: any): any {
-  if (obj === null || typeof obj !== 'object') return obj;
+interface IDeepCloneSupportedTypeObject {
+  [x: string]: DeepCloneSupportedType;
+}
+
+// the part of the trick above
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface IDeepCloneSupportedTypeArray extends Array<DeepCloneSupportedType> { }
+
+/** @deprecated since v8.9.0 - use structuredClone instead
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+ */
+function deepClone<T extends DeepCloneSupportedType>(obj: T): T;
+function deepClone(obj: DeepCloneSupportedType): DeepCloneSupportedType {
+  if (obj == null || typeof obj !== 'object') {
+    return obj;
+  }
 
   if (obj instanceof Date) {
     const copy = new Date();
@@ -13,24 +27,20 @@ function deepClone(obj: any): any {
   }
 
   if (obj instanceof Array) {
-    const copy = [];
+    const copy: IDeepCloneSupportedTypeArray = [];
     for (let i = 0, len = obj.length; i < len; i++) {
       copy[i] = deepClone(obj[i]);
     }
     return copy;
   }
 
-  if (obj instanceof Object) {
-    const copy: Record<any, any> = {};
-    for (const attr in obj) {
-      if (obj.hasOwnProperty(attr)) {
-        copy[attr] = deepClone(obj[attr]);
-      }
-    }
-    return copy;
-  }
+  const copy: typeof obj = {};
 
-  return obj;
+  Object.keys(obj).forEach(key => {
+    copy[key] = deepClone(obj[key]);
+  });
+
+  return copy;
 }
 
 export default deepClone;

@@ -2,7 +2,6 @@ type colors = 'reset' | 'bold' | 'dim' | 'black' | 'red' | 'green' | 'yellow' | 
   'magenta' | 'cyan' | 'white' | 'bgBlack' | 'bgRed' | 'bgGreen' | 'bgYellow' |
   'bgBlue' | 'bgMagenta' | 'bgCyan' | 'bgWhite';
 
-
 // example: console.log(colorize('foo', 'bar').red);
 export default (...args: string[]): Record<colors, string> => {
   const str = args.join(' ');

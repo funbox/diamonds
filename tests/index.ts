@@ -1,11 +1,10 @@
 import { describe, it } from 'mocha';
+import { expect } from 'chai';
 
 import {
   formatNumberString,
   formatPhoneNumberString,
 } from '../lib';
-
-const expect = require('chai').expect;
 
 describe('formatNumberString', () => {
   it('should return non formatted integer when its < 1000', () => {

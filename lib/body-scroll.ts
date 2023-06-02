@@ -13,12 +13,10 @@ export function enableBodyScroll(): void {
         left: window.pageXOffset,
         top: scrollTop,
 
-        // 'instant' is supported by Chrome and Firefox even so it was removed from the spec years ago
+        // @ts-expect-error: 'instant' is supported by Chrome and Firefox even so it was removed from the spec years ago
         // also it still may be back: https://github.com/w3c/csswg-drafts/issues/3497
         // it's useful here when the <html> has scroll-behavior: smooth set
         // we don't want smooth scroll, we want the actual jump
-        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-        // @ts-ignore
         behavior: 'instant',
       });
     }

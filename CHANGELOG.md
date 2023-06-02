@@ -1,5 +1,20 @@
 # Changelog
 
+## 8.9.0 (31.05.2023)
+
+Ensured Node.js 18 support.
+
+`deepClone` typings have become more strict due to the goal to remove `any`. 
+Thus, this helper does not expect `any` anymore. 
+Instead it expects `boolean | number | bigint | string | undefined | null | Date`, or array of them, or an object with values of these types. 
+The array and theh object may be nested.
+
+We believe that this is not a breaking change, because this change makes types more correct and more close to the implementation.
+It means that if your code does not satisfy the types of `deepClone`, you're probably not using it right.
+
+Nevertheless, we've deprecated `deepClone` due to existence of [`structuredClone`](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone).
+
+
 ## 8.8.0 (14.12.2022)
 
 Now `formatNumberString` & `formatPhoneNumberString` accept not only numbers, but strings.
